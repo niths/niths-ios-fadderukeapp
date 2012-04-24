@@ -1,0 +1,55 @@
+
+.val {
+  float: right;
+
+}
+
+.ui-btn-active { color: none !important; background: none !important; background-color: #00ADEF !important;  }
+
+@font-face {
+	font-family: header_font;
+	src: url('fonts/US101.TTF');
+/* 	src: url('fonts/COUTURE-Bold.ttf'); */
+	
+}
+
+.customfont{
+	font-family: header_font;
+}
+
+.withborder{
+	margin-top: 2px;
+	font-family: header_font;
+	border-top: dotted 2px black;
+	border-bottom: dotted 2px black;
+	padding-top:16px;
+	padding-bottom:14px;
+}
+
+.dividerwithborder{
+	padding-top:12px;
+	padding-bottom:10px;
+	margin-bottom:10px;
+	border-bottom: dotted 2px black;	
+	border-top: dotted 2px black;	
+	height:82px;
+}
+
+.bottomborder {
+	margin-bottom:15px;
+	border-bottom: dotted 2px black;
+}
+
+a.blacklink:link{
+	color:black;
+	text-decoration: none;
+}
+a.blacklink:visited {
+	text-decoration: none;
+	color:black;
+}
+
+a.blacklink:active {
+	text-decoration: none;
+	color: #00ADEF;
+}

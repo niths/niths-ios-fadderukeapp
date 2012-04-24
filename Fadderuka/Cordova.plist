@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AllowInlineMediaPlayback</key>
+	<false/>
+	<key>AutoHideSplashScreen</key>
+	<true/>
+	<key>EnableLocation</key>
+	<false/>
+	<key>EnableViewportScale</key>
+	<false/>
+	<key>ExternalHosts</key>
+	<array>
+		<string>*</string>
+	</array>
+	<key>MediaPlaybackRequiresUserAction</key>
+	<false/>
+	<key>OpenAllWhitelistURLsInWebView</key>
+	<false/>
+	<key>Plugins</key>
+	<dict>
+		<key>Accelerometer</key>
+		<string>CDVAccelerometer</string>
+		<key>Battery</key>
+		<string>CDVBattery</string>
+		<key>Camera</key>
+		<string>CDVCamera</string>
+		<key>Capture</key>
+		<string>CDVCapture</string>
+		<key>ChildBrowser</key>
+		<string>ChildBrowser.js</string>
+		<key>ChildBrowserCommand</key>
+		<string>ChildBrowserCommand</string>
+		<key>Compass</key>
+		<string>CDVLocation</string>
+		<key>Contacts</key>
+		<string>CDVContacts</string>
+		<key>Debug Console</key>
+		<string>CDVDebugConsole</string>
+		<key>File</key>
+		<string>CDVFile</string>
+		<key>FileTransfer</key>
+		<string>CDVFileTransfer</string>
+		<key>Geolocation</key>
+		<string>CDVLocation</string>
+		<key>Media</key>
+		<string>CDVSound</string>
+		<key>NetworkStatus</key>
+		<string>CDVConnection</string>
+		<key>Notification</key>
+		<string>CDVNotification</string>
+		<key>SplashScreen</key>
+		<string>CDVSplashScreen</string>
+	</dict>
+	<key>ShowSplashScreenSpinner</key>
+	<true/>
+	<key>TopActivityIndicator</key>
+	<string>gray</string>
+	<key>UIWebViewBounce</key>
+	<true/>
+</dict>
+</plist>
