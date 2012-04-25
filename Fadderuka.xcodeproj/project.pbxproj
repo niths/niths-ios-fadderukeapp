@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19888FEA1546CF37009B7138 /* ChildBrowser.js in Sources */ = {isa = PBXBuildFile; fileRef = 19888FE41546CF36009B7138 /* ChildBrowser.js */; };
 		19888FEB1546CF37009B7138 /* ChildBrowserCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 19888FE61546CF37009B7138 /* ChildBrowserCommand.m */; };
 		19888FEC1546CF37009B7138 /* ChildBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19888FE81546CF37009B7138 /* ChildBrowserViewController.m */; };
 		19888FED1546CF37009B7138 /* ChildBrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19888FE91546CF37009B7138 /* ChildBrowserViewController.xib */; };
@@ -43,10 +42,10 @@
 		198E7B8B1545670A00A7DE6D /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 198E7B8A1545670A00A7DE6D /* MainViewController.xib */; };
 		198E7B8F1545670A00A7DE6D /* verify.sh in Resources */ = {isa = PBXBuildFile; fileRef = 198E7B8E1545670A00A7DE6D /* verify.sh */; };
 		198E7CA515456A9600A7DE6D /* www in Resources */ = {isa = PBXBuildFile; fileRef = 198E7CA415456A9600A7DE6D /* www */; };
+		19BC880F154826CC00655BBC /* NativeControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BC880E154826CC00655BBC /* NativeControls.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		19888FE41546CF36009B7138 /* ChildBrowser.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = ChildBrowser.js; path = Plugins/ChildBrowser.js; sourceTree = "<group>"; };
 		19888FE51546CF37009B7138 /* ChildBrowserCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChildBrowserCommand.h; path = Plugins/ChildBrowserCommand.h; sourceTree = "<group>"; };
 		19888FE61546CF37009B7138 /* ChildBrowserCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChildBrowserCommand.m; path = Plugins/ChildBrowserCommand.m; sourceTree = "<group>"; };
 		19888FE71546CF37009B7138 /* ChildBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChildBrowserViewController.h; path = Plugins/ChildBrowserViewController.h; sourceTree = "<group>"; };
@@ -90,6 +89,8 @@
 		198E7B8D1545670A00A7DE6D /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
 		198E7B8E1545670A00A7DE6D /* verify.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = verify.sh; sourceTree = "<group>"; };
 		198E7CA415456A9600A7DE6D /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
+		19BC880D154826CC00655BBC /* NativeControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeControls.h; sourceTree = "<group>"; };
+		19BC880E154826CC00655BBC /* NativeControls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeControls.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,7 +268,8 @@
 		198E7B8C1545670A00A7DE6D /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				19888FE41546CF36009B7138 /* ChildBrowser.js */,
+				19BC880D154826CC00655BBC /* NativeControls.h */,
+				19BC880E154826CC00655BBC /* NativeControls.m */,
 				19888FE51546CF37009B7138 /* ChildBrowserCommand.h */,
 				19888FE61546CF37009B7138 /* ChildBrowserCommand.m */,
 				19888FE71546CF37009B7138 /* ChildBrowserViewController.h */,
@@ -379,9 +381,9 @@
 				198E7B5F1545670A00A7DE6D /* main.m in Sources */,
 				198E7B861545670A00A7DE6D /* AppDelegate.m in Sources */,
 				198E7B891545670A00A7DE6D /* MainViewController.m in Sources */,
-				19888FEA1546CF37009B7138 /* ChildBrowser.js in Sources */,
 				19888FEB1546CF37009B7138 /* ChildBrowserCommand.m in Sources */,
 				19888FEC1546CF37009B7138 /* ChildBrowserViewController.m in Sources */,
+				19BC880F154826CC00655BBC /* NativeControls.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
