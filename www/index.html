@@ -104,7 +104,6 @@
             		</ul>
             		<div class="listbtns">
 						<a href="" data-role="button" id="resfresheventsbtn" data-icon="refresh" data-inline="true" data-iconpos="notext" >Refresh</a>
-                        <!-- 						<a href="#program-page" data-role="button" data-icon="grid" data-iconpos="notext" data-inline="true" >Program</a> -->
 					</div>
                 </div><!-- /events -->
                 
@@ -140,7 +139,6 @@
             		<ul>
                 		<li><a href="#" id="profilebtn" data-icon="info" data-iconpos="top">Profil</a></li>
 						<li><a href="#all-fadder-groups-page" id="myGroupBtn" data-icon="star" data-iconpos="top">Faddergrupper</a></li>
-                         						<li><a href="#scan-qr-page" data-icon="grid" data-iconpos="top">QR kode</a></li>
 						<li><a href="#program-page" data-icon="grid" data-iconpos="top">Program</a></li>
                 	</ul>
             	</div>
@@ -165,10 +163,7 @@
             
             <div data-role="content">
                 <div id="singleevent">
-                    <!--      		<input type="hidden" name="event_id" id="event_id" value="5" /> -->
-                    
-                    <div id="loadingmsg"><img class="spin" src="stylesheets/common/images/loader.png" /></div>
-                    
+                    <div id="loadingmsg"><img class="spin" src="stylesheets/common/images/loader.png" /></div>                
                     <div id ="eventinfo">
                         <h1 class="withborder" id="eventname" ></h1>
                         <p id = "eventtime"></p>
@@ -183,7 +178,6 @@
                     <ul>
                         <li><a href="#dashboard-page" id="profilebtn" data-icon="info" data-iconpos="top">Dashboard</a></li>
                         <li><a href="#all-fadder-groups-page" id="myGroupBtn" data-icon="star" data-iconpos="top">Faddergrupper</a></li>
-                        <!-- 						<li><a href="#scan-qr-page" data-icon="grid" data-iconpos="top">QR kode</a></li> -->
                         <li><a href="#program-page" data-icon="grid" data-iconpos="top">Program</a></li>
                     </ul>
                 </div>
@@ -202,7 +196,7 @@
                 </script>
             
             <div data-role="header" data-theme="b">
-                <a href="#"  data-role="button" data-rel="back" class="ui-btn-left">Back</a>
+               <!-- <a href="#dashboard-page"  data-role="button" data-rel="back" class="ui-btn-left">Back</a>-->
                 <h3>PROGRAM</h3>
             </div>
             
@@ -246,7 +240,7 @@
                 </script>
             
 			<div data-role="header" data-theme="b">
-				<a href="#dashboard-page"  data-role="button" data-rel="back" class="ui-btn-left">Back</a>
+<!--		<a href="#dashboard-page"  data-role="button" data-rel="back" class="ui-btn-left">Back</a>-->
 				<h3>ALLE GRUPPER</h3>
 				<a href="#" id="refreshFadderGroupsListBtn" data-role="button" class="ui-btn-right">Refresh</a>
 			</div>
@@ -266,7 +260,6 @@
                     <ul>
                         <li><a href="#dashboard-page" id="profilebtn" data-icon="info" data-iconpos="top">Dashboard</a></li>
                         <li><a href="#all-fadder-groups-page" id="myGroupBtn" data-icon="star" data-iconpos="top">Faddergrupper</a></li>
-                        <!-- 						<li><a href="#scan-qr-page" data-icon="grid" data-iconpos="top">QR kode</a></li> -->
                         <li><a href="#program-page" data-icon="grid" data-iconpos="top">Program</a></li>
                     </ul>
                 </div>
@@ -284,7 +277,7 @@
                 </script>
             
 			<div data-role="header" data-theme="b">
-				<a href="#"  data-role="button" data-rel="back" class="ui-btn-left">Back</a>
+				<!--<a href="#"  data-role="button" data-rel="back" class="ui-btn-left">Back</a>-->
 				<h3>FADDERGRUPPE</h3>
 			</div>
             
@@ -655,7 +648,7 @@
             </header>
             <div data-role="content">
                 <h1 class="withborder">Scan QR</h1>
-                <p>Ta bilde av din QR-kode og finn hvilken faddergruppe du h√∏rer til!<p>
+                <p>Ta bilde av din QR-kode og finn hvilken faddergruppe du hører til!<p>
                 <button id="capture-qr-code">Ta bilde!</button>
             </div>
         </div>
