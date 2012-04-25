@@ -14,12 +14,14 @@
  *
  * });
  */
+
+
 function RestHandler(){
-//	this.baseUrl = 'http://192.168.0.105:8080/niths/'; // Ben
-	
   	this.baseUrl = 'http://10.110.73.75:8080/niths/';
 	//this.baseUrl = 'http://ec2-46-137-44-111.eu-west-1.compute.amazonaws.com:8080/niths/';
-	
+
+    
+    
 	this.find = function(modelUrl, callbackSuccess, callbackError) {
 	    $.ajax({
 	      type: 'GET',
@@ -49,7 +51,7 @@ function RestHandler(){
 		    error: function(jqXHR, textStatus, errorThrown){
 		    	handleError(errorThrown, jqXHR);
 		    },
-		    timeout:5000
+		    timeout:10000
 		 });
 	}; //End remove
 	
@@ -113,7 +115,7 @@ function RestHandler(){
 			},
 			success: callbackSuccess,
 			error: callbackError,
-			timeout:5000
+			timeout:10000
 		});
 	}; //End update
 	
@@ -136,14 +138,14 @@ function RestHandler(){
 			error: function(jqXHR, textStatus, errorThrown){
 				handleError(errorThrown, jqXHR);
 			},
-			timeout:5000
+			timeout:10000
 		});
 	}; //End update
 	
 	function handleError(errorThrown, jqXHR){
 		$.mobile.hidePageLoadingMsg();
 		if(errorThrown == 'Unauthorized'){
-			alert('Beklager, du har vï¿½rt inaktiv for lenge, logg inn igjen');
+			alert('Beklager, du har v¾rt inaktiv for lenge, logg inn igjen');
 			sessionToken = '';
 			$.mobile.changePage('#dashboard-page');
 		}else{
