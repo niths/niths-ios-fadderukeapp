@@ -19,13 +19,18 @@
     margin-right:10px;
 }
  
-#tweets2 li a, #tweets2 li span {
+#tweets2 li p, #tweets2 li span {
     float:left;
 }
 
-a.tweetlink:link{
+#tweets2 img {
+    padding:7px;
+ }
+
+p.tweetlink:link{
 	color:#00ADEF;
 }
+/*
 a.tweetlink:visited {
 	color:#00ADEF;
 }
@@ -33,7 +38,8 @@ a.tweetlink:visited {
 a.tweetlink:active {
 	color: #00ADEF;
 }
- 
+ */
+
 #tweets2 li span {
     width:70%;
 }

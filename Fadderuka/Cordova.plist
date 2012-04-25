@@ -20,6 +20,10 @@
 	<false/>
 	<key>Plugins</key>
 	<dict>
+		<key>NativeControlsCommand</key>
+		<string>NativeControlsCoomand</string>
+		<key>NativeControls</key>
+		<string>NativeControls.js</string>
 		<key>Accelerometer</key>
 		<string>CDVAccelerometer</string>
 		<key>Battery</key>

@@ -1,6 +1,6 @@
 
-$("#profile-page").live('pageinit', function() {
-	if (student.id < 1) {
+$("#profile-page").live('pageshow', function() {
+	if (student ==  {}) {
 		history.back();
 		return false;
 	} else {
@@ -81,7 +81,7 @@ function showProfile(){
 		if(student.fadderGroup != null){
 			$('#faddergroup').html('<a class="blacklink" href="#single-fadder-group-page?group-id='+student.fadderGroup.id+'">' + student.fadderGroup.groupNumber + '</a>');
 		}else{
-			$('#faddergroup').html('<a class="blacklink" href="#scan-qr-page">Scann QR</a>');
+			$('#faddergroup').html('<a class="blacklink" href="#scan-qr-page">Trykk her</a>');
 		}
 		
 		showProfile();
