@@ -42,6 +42,10 @@
 		198E7B8B1545670A00A7DE6D /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 198E7B8A1545670A00A7DE6D /* MainViewController.xib */; };
 		198E7B8F1545670A00A7DE6D /* verify.sh in Resources */ = {isa = PBXBuildFile; fileRef = 198E7B8E1545670A00A7DE6D /* verify.sh */; };
 		198E7CA515456A9600A7DE6D /* www in Resources */ = {isa = PBXBuildFile; fileRef = 198E7CA415456A9600A7DE6D /* www */; };
+		19A6601515494A3900504A6B /* normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 19A6601415494A3900504A6B /* normal.png */; };
+		19A6601815494A4E00504A6B /* retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 19A6601715494A4E00504A6B /* retina.png */; };
+		19A6601A154957E300504A6B /* ChildBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 19A66019154957E300504A6B /* ChildBrowser.bundle */; };
+		19A6602415496A1400504A6B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 19A6602315496A1400504A6B /* Default.png */; };
 		19BC880F154826CC00655BBC /* NativeControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BC880E154826CC00655BBC /* NativeControls.m */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +93,10 @@
 		198E7B8D1545670A00A7DE6D /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
 		198E7B8E1545670A00A7DE6D /* verify.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = verify.sh; sourceTree = "<group>"; };
 		198E7CA415456A9600A7DE6D /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
+		19A6601415494A3900504A6B /* normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = normal.png; sourceTree = "<group>"; };
+		19A6601715494A4E00504A6B /* retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = retina.png; sourceTree = "<group>"; };
+		19A66019154957E300504A6B /* ChildBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ChildBrowser.bundle; path = Plugins/ChildBrowser.bundle; sourceTree = "<group>"; };
+		19A6602315496A1400504A6B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		19BC880D154826CC00655BBC /* NativeControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeControls.h; sourceTree = "<group>"; };
 		19BC880E154826CC00655BBC /* NativeControls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeControls.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +136,9 @@
 		198E7B2B1545670900A7DE6D = {
 			isa = PBXGroup;
 			children = (
+				19A6602315496A1400504A6B /* Default.png */,
+				19A6601715494A4E00504A6B /* retina.png */,
+				19A6601415494A3900504A6B /* normal.png */,
 				198E7CA415456A9600A7DE6D /* www */,
 				198E7B571545670900A7DE6D /* Fadderuka */,
 				198E7B3C1545670900A7DE6D /* Frameworks */,
@@ -268,6 +279,7 @@
 		198E7B8C1545670A00A7DE6D /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				19A66019154957E300504A6B /* ChildBrowser.bundle */,
 				19BC880D154826CC00655BBC /* NativeControls.h */,
 				19BC880E154826CC00655BBC /* NativeControls.m */,
 				19888FE51546CF37009B7138 /* ChildBrowserCommand.h */,
@@ -352,6 +364,10 @@
 				198E7B8F1545670A00A7DE6D /* verify.sh in Resources */,
 				198E7CA515456A9600A7DE6D /* www in Resources */,
 				19888FED1546CF37009B7138 /* ChildBrowserViewController.xib in Resources */,
+				19A6601515494A3900504A6B /* normal.png in Resources */,
+				19A6601815494A4E00504A6B /* retina.png in Resources */,
+				19A6601A154957E300504A6B /* ChildBrowser.bundle in Resources */,
+				19A6602415496A1400504A6B /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -130,7 +130,7 @@
                     <strong>Tlf:</strong> 22 05 99 99<br />
                     <strong>Mail:</strong> oslo@nith.no<br />
                     <strong>Kontortid:</strong> 09.00 - 11.30 og 12.00 - 15.00</p>
-                    <p></p>
+                    <br />
             	</div>
             </div>
             
@@ -140,6 +140,7 @@
                 		<li><a href="#" id="profilebtn" data-icon="info" data-iconpos="top">Profil</a></li>
 						<li><a href="#all-fadder-groups-page" id="myGroupBtn" data-icon="star" data-iconpos="top">Faddergrupper</a></li>
 						<li><a href="#program-page" data-icon="grid" data-iconpos="top">Program</a></li>
+                     <!--   <li><a href="#scan-qr-page" data-icon="grid" data-iconpos="top">qr</a></li>-->
                 	</ul>
             	</div>
             </div><!-- footer -->
@@ -156,8 +157,8 @@
             <script type="text/javascript" charset="utf-8"
                 src="javascripts/index/event.js">
                 </script>
-           <div data-role="header" data-theme="b">
-                <a href="#"  data-role="button" data-rel="back" class="ui-btn-left">Back</a>
+            <div data-role="header" data-theme="b">
+                <!-- <a href="#"  data-role="button" data-rel="back" class="ui-btn-left">Back</a>-->
                 <h3>EVENT</h3>
             </div>
             
@@ -196,7 +197,7 @@
                 </script>
             
             <div data-role="header" data-theme="b">
-               <!-- <a href="#dashboard-page"  data-role="button" data-rel="back" class="ui-btn-left">Back</a>-->
+                <!-- <a href="#dashboard-page"  data-role="button" data-rel="back" class="ui-btn-left">Back</a>-->
                 <h3>PROGRAM</h3>
             </div>
             
@@ -214,14 +215,13 @@
                 <div id="programlist">
                     
                 </div><!-- /programlist-->
-            	
+            	<br />
             </div> <!-- content -->
             <div data-role="footer" data-position="fixed"  data-theme="b">
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#dashboard-page" id="profilebtn" data-icon="info" data-iconpos="top">Dashboard</a></li>
                         <li><a href="#all-fadder-groups-page" id="myGroupBtn" data-icon="star" data-iconpos="top">Faddergrupper</a></li>
-                        <!-- 						<li><a href="#scan-qr-page" data-icon="grid" data-iconpos="top">QR kode</a></li> -->
                         <li><a href="#program-page" data-icon="grid" data-iconpos="top">Program</a></li>
                     </ul>
                 </div>
@@ -240,7 +240,6 @@
                 </script>
             
 			<div data-role="header" data-theme="b">
-<!--		<a href="#dashboard-page"  data-role="button" data-rel="back" class="ui-btn-left">Back</a>-->
 				<h3>ALLE GRUPPER</h3>
 				<a href="#" id="refreshFadderGroupsListBtn" data-role="button" class="ui-btn-right">Refresh</a>
 			</div>
@@ -254,6 +253,7 @@
                     </ul>
                 </div>
 				<div id="loadingGroupsMsgDiv"><img class="spin" src="stylesheets/common/images/loader.png" /></div>
+                <br />
 			</div><!-- /content -->
             <div data-role="footer" data-position="fixed"  data-theme="b">
                 <div data-role="navbar">
@@ -277,7 +277,6 @@
                 </script>
             
 			<div data-role="header" data-theme="b">
-				<!--<a href="#"  data-role="button" data-rel="back" class="ui-btn-left">Back</a>-->
 				<h3>FADDERGRUPPE</h3>
 			</div>
             
@@ -293,14 +292,14 @@
      				<ul id ="groupmemberslist" data-role="listview" class="ui-listview" data-inset="true"></ul>
      			</div>
 				
-				
+				<br />
 			</div><!-- /content -->
             <div data-role="footer" data-position="fixed"  data-theme="b">
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#dashboard-page" id="profilebtn" data-icon="info" data-iconpos="top">Dashboard</a></li>
                         <li><a href="#all-fadder-groups-page" id="myGroupBtn" data-icon="star" data-iconpos="top">Faddergrupper</a></li>
-                        <!-- 						<li><a href="#scan-qr-page" data-icon="grid" data-iconpos="top">QR kode</a></li> -->
+                    
                         <li><a href="#program-page" data-icon="grid" data-iconpos="top">Program</a></li>
                     </ul>
                 </div>
@@ -322,7 +321,7 @@
                 </script>
             
             <div data-role="header" data-theme="b">
-                <a href="#dashboard-page"  data-role="button" data-rel="back" class="ui-btn-left">Back</a>
+                <a href="#dashboard-page"  data-role="button" class="ui-btn-left">Back</a>
                 <h3>ADMIN</h3>
                 <a href="#"  id="refreshallbtn" data-role="button" class="ui-btn-right">Refresh</a>
             </div>
@@ -342,6 +341,7 @@
                 <div id="loadinforallevents"><img class="spin" src="stylesheets/common/images/loader.png" /></div>
                 <ul id ="alleventlist" data-role="listview" class="ui-listview" data-inset="true">
                 </ul>
+                <br />
             </div><!-- Content -->
         </div> 	<!-- page -->
         
@@ -365,7 +365,7 @@
                 </script>
             
             <div data-role="header" data-theme="b">
-                <a href="#"  data-role="button" data-rel="back" class="ui-btn-left">Back</a>
+                <a href="#admin-page"  data-role="button" class="ui-btn-left">Back</a>
                 <h3>ENDRE EVENT</h3>
             </div>
             <div data-role="content">
@@ -383,14 +383,6 @@
                             <label for="description">Beskrivelse:</label> 
                             <textarea cols="40" rows="8" name="description" id="description" placeholder="Beskrivelse"></textarea>
                         </div>
-                        <!-- 				<div class="ui-hide-label"> -->
-                        <!-- 					<label for="startTime">Start:</label>  -->
-                        <!-- 					<input type="text" name="starTime" id="startTime" value="" placeholder="Start" /> -->
-                        <!-- 				</div> -->
-                        <!-- 				<div class="ui-hide-label"> -->
-                        <!-- 					<label for="endTime">Slutt:</label>  -->
-                        <!-- 					<input type="text" name="endTime" id="endTime" value="" placeholder="Slutt" /> -->
-                        <!-- 				</div> -->
                         <div class="ui-hide-label">
                             <label for="startTime">Start</label>
                             <input type="text" name="startTime" id="startTime" class="mobiscroll" placeholder="Start: dd/mm/yyyy-hh:mm"/>
@@ -417,12 +409,11 @@
                         </div>
                         <div class="bottomborder"></div>
                         <button type="submit" id="editeventsubmit" data-role="button">Oppdater</button>
-                        <!-- 				<button type="submit" id="deleteeventsubmit" data-role="button">Slett</button> -->
-                        
                         <a href="#" id="opendialog" data-role="button">Slett</a>
                         
                     </form>
                 </div><!-- updateventinfodiv -->
+                <br />
             </div><!-- Content -->
         </div> 	<!-- page -->
         
@@ -442,15 +433,13 @@
                 </script>
             
             <div data-role="header" data-theme="b">
-                <a href="#"  data-role="button" data-rel="back" class="ui-btn-left">Back</a>
+                <a href="#admin-page"  data-role="button" class="ui-btn-left">Back</a>
                 <h3>OPPRETT EVENT</h3>
             </div>
             <div data-role="content">
                 <h1 class="withborder">Opprett event</h1>
                 <div id="createeventdiv">
                     <form id="create-event-form" >
-                        <!-- 				<input id="id" name="id" type="hidden" value="" /> -->
-                        
                         <div class="ui-hide-label">
                             <label for="name2">Navn:</label> 
                             <input type="text" name="name2" id="name2" value="" placeholder="Navn" />
@@ -459,10 +448,6 @@
                             <label for="description2">Beskrivelse:</label> 
                             <textarea cols="40" rows="8" name="description2" id="description2" placeholder="Beskrivelse"></textarea>
                         </div>
-                        <!-- 				<div class="ui-hide-label"> -->
-                        <!-- 					<label for="startTime2">Start:</label>  -->
-                        <!-- 					<input type="text" name="starTime2" id="startTime2" value="" placeholder="Start: dd/mm/yyyy-hh:mm" /> -->
-                        <!-- 				</div> -->
                         <div class="ui-hide-label">
                             <label for="startTime2">Datetime</label>
                             <input type="text" name="startTime2" id="startTime2" class="mobiscroll" placeholder="Start: dd/mm/yyyy-hh:mm"/>
@@ -471,12 +456,7 @@
                             <label for="endTime2">Datetime</label>
                             <input type="text" name="endTime2" id="endTime2" class="mobiscroll" placeholder="Slutt: dd/mm/yyyy-hh:mm"/>
                         </div>
-                        
-                        
-                        <!-- 				<div class="ui-hide-label"> -->
-                        <!-- 					<label for="endTime2">Slutt:</label>  -->
-                        <!-- 					<input type="text" name="endTime2" id="endTime2" value="" placeholder="Stopp: dd/mm/yyyy-hh:mm" /> -->
-                        <!-- 				</div> -->
+                                       
                         <div class="ui-hide-label" id="privacy2">
                             
                         </div>
@@ -493,11 +473,10 @@
                             <input type="text" name="longitude2" id="longitude2" value="" placeholder="Longitude" />
                         </div>
                         <div class="bottomborder"></div>
-                        <button type="submit" id="createeventsubmit" data-role="button">Opprett</button>
-                        <!-- 				<button type="submit" id="deleteeventsubmit" data-role="button">Slett</button> -->
-                        
+                        <button type="submit" id="createeventsubmit" data-role="button">Opprett</button>    
                     </form>
                 </div><!-- updateventinfodiv -->
+                <br />
             </div><!-- Content -->
         </div> 	<!-- page -->
         
@@ -517,7 +496,7 @@
                 </script>
             
             <div data-role="header" data-theme="b">
-                <a href="#dashboard-page"  data-role="button" data-rel="back" class="ui-btn-left">Back</a>
+                <a href="#dashboard-page"  data-role="button" class="ui-btn-left">Back</a>
                 <h3>PROFIL</h3>
             </div>
             
@@ -568,7 +547,7 @@
                     </div><!-- profileinfo -->
                     
                 </div>
-                
+                <br />
             </div><!-- Content -->
             
         </div> 	<!-- page -->
@@ -617,7 +596,7 @@
                 </script>
             
             <div data-role="header" data-theme="b">
-                <a href="#" data-rel="back" data-role="button" class="ui-btn-left">Back</a>
+                <a href="#dashboard-page" data-role="button" class="ui-btn-left">Back</a>
                 <h3>GALLERI</h3>
                 <a href="#" id="refreshGalleryBtn" data-role="button" class="ui-btn-right">Refresh</a>
             </div>
@@ -629,26 +608,24 @@
                     <ul class="gallery" id="lastPics" >
                     </ul>
                 </div>
+                <br />
             </div>
         </div> <!-- End gallery page -->
         
         
         
         
-        <!-- QR CODE PAGE -->
-        
-        
-        
+        <!-- QR CODE PAGE -->  
         <div data-role="page" data-theme="c" id="scan-qr-page">
             <script type="text/javascript" charset="utf-8"
                 src="javascripts/qr-code.js"></script>
             <header data-role="header" data-theme="b">
-                <a href="#" data-rel="back" data-role="button" class="ui-btn-left">Back</a>
+                <a href="#profile-page" data-role="button" class="ui-btn-left">Back</a>
                 <h1>QR-kode</h1>
             </header>
             <div data-role="content">
                 <h1 class="withborder">Scan QR</h1>
-                <p>Ta bilde av din QR-kode og finn hvilken faddergruppe du hører til!<p>
+                <p>Ta bilde av din QR-kode og finn hvilken faddergruppe du h&oslash;rer til!<p>
                 <button id="capture-qr-code">Ta bilde!</button>
             </div>
         </div>
@@ -661,7 +638,7 @@
                 src="javascripts/admin/fadder-children.js">
                 </script>
             <header data-role="header" data-theme="b">
-                <a href="#"  data-role="button" data-rel="back" class="ui-btn-left">Back</a>
+                <a href="#admin-page"  data-role="button"  class="ui-btn-left">Back</a>
                 <h1>FADDERBARN</h1>
             </header>
             <div data-role="content">
@@ -685,8 +662,9 @@
                             <label for="radio-send-email">Send e-post</label>
                         </fieldset>
                     </div>
-                    <button type="submit">Utf√∏r</button>
+                    <button type="submit">Utf&oslash;r</button>
                 </form>
+                <br />
             </div>
         </div>
         
@@ -714,7 +692,7 @@
                 src="javascripts/admin/send-email.js">
                 </script>
             <header data-role="header" data-theme="b">
-                <a href="#"  data-role="button" data-rel="back" class="ui-btn-left">Back</a>
+                <a href="#fadderchildren-pagen"  data-role="button" class="ui-btn-left">Back</a>
                 <h1>SEND EPOST</h1>
             </header>
             <div data-role="content">
@@ -727,6 +705,7 @@
                     </div>
                     <button type="submit">Send</button>
                 </form>
+                <br />
             </div>
         </div>
         
@@ -744,7 +723,7 @@
                 src="javascripts/admin/add-child-manually.js">
                 </script>
             <div data-role="header" data-theme="b">
-                <a href="#"  data-role="button" data-rel="back" class="ui-btn-left">Back</a>
+               <a href="#fadderchildren-pagen"  data-role="button" class="ui-btn-left">Back</a>
                 <h3>LEGG TIL BARN</h3>
             </div>
             
@@ -758,7 +737,7 @@
                     
                     <button type="submit">Legg til</button>
                 </form>
-                
+                <br />
             </div><!-- Content -->
             
         </div> 	<!-- page -->

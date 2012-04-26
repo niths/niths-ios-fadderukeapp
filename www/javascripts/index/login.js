@@ -13,23 +13,25 @@ $(document).ready(function() {
   var stateURLFragment = 'state=/profile';
   var isNITHMail       = false;
 
+    
   $('#loginbtn').click(function() {
-    ChildBrowser.install();
+   ChildBrowser.install();
     if(sessionToken == '') { //Not signed in
       resetUserValues();
       signIn();       
     } else { //Already signed in
       resetUserValues();
+        configureLocationChanged();
       window.plugins.childBrowser.showWebPage(
           'https://accounts.google.com/Logout');
     }
   });
 
    $('#profilebtn').click(function() {
-     ChildBrowser.install();
+    ChildBrowser.install();
 
      if(sessionToken == '') {
-       showErr('Vennligst logg inn', function() {
+       showMsg('Vennligst logg inn', function() {
          resetUserValues();
          signIn();
        });
@@ -57,12 +59,13 @@ $(document).ready(function() {
 
   /**
    * This method runs every time Childbrowser changes page
-   */
+   */   
   function configureLocationChanged() {
     window.plugins.childBrowser.onLocationChange = function(url) {
       var receiveTokenURL = new RegExp('^' + callbackURL + '%23' +
         stateURLFragment + '&access_token=..*$');
 
+        console.log("location is changing");
       // Triggered if the app is denied access
       if (url == callbackURL + '#error=access_denied' + stateURLFragment) {
         showErr('Fikk ikke tilgang', function() {
@@ -77,7 +80,10 @@ $(document).ready(function() {
       } else if (url == 'https://accounts.google.com/Login') {
         window.plugins.childBrowser.close();
         resetUserValues();
-        toggleBtnText();
+      }else if(url == 'http://nith.no/'){
+          console.log("--------- is closing");
+          window.plugins.childBrowser.close();
+          toggleBtnText
       } else{
           toggleBtnText();
       }
@@ -123,7 +129,7 @@ $(document).ready(function() {
             sessionToken = "-1";
             showErr('Bruker har ikke NITH-mail, logg ut og inn igjen', null);
           } else if (status == 'timeout') {
-            showErr('Fikk ikke kontakt med serveren, logg inn igjen');
+            showErr('Fikk ikke kontakt med serveren, logg inn igjen (timeout)');
           } else {
             showErr('En feil intraff');
         }

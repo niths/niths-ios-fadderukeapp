@@ -25,12 +25,12 @@ $('#confirm-dialog-page').bind('pageshow', function(){
 					alert(xhr.status + ': Sletting feilet');
 				}
 				$.mobile.hidePageLoadingMsg();
-				history.back();	
+              history.go(-1);	
 			});
 		  return false;
 	  });
 
 	  $('#no').click(function() {
-	    history.back();
+	    history.go(-1);
 	  });
 });

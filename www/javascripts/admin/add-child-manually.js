@@ -3,9 +3,6 @@ $('#add-child-admin-page').bind('pageshow', function(){
 	showLoadingGrouplessStudents();
 	loadGrouplessStudents();
 
-	
-	
-
 function clearFormContents(){
 	$('#fadder-groupless-collection').html('');
 }
@@ -24,7 +21,6 @@ function hideLoadingGrouplessStudents(){
 
 
 function loadGrouplessStudents(){
-//	clearFormContents();
 	var restClient = new RestHandler();
 	restClient.find('fadder/groupless',  function(data) {  
 		traverseGrouplessStudents(data);
@@ -34,8 +30,6 @@ function loadGrouplessStudents(){
 }
 
 function traverseGrouplessStudents(students) {
-	
-	
     $.each(students, function(i, fadderChild) {
       $('#fadder-groupless-collection').append(
           '<input type="checkbox" id="' + fadderChild.id +
@@ -60,18 +54,22 @@ function traverseGrouplessStudents(students) {
 		
 		function addGRChildrenToGroup(){
 			var restClient = new RestHandler();
-			var idArr = $("#fadder-groupless-collection input:checkbox:checked").map(function(i, el) { return $(el).attr("id"); }).get();
-			restClient.updateURL('fadder/' + fadderGroupId + '/children/' + idArr.join(','),  function(data, textStatus, jqXHR) {
+			var idArr = $("#fadder-groupless-collection input:checkbox:checked")
+                .map(function(i, el) { return $(el).attr("id"); }).get();
+            
+			restClient.updateURL('fadder/' + fadderGroupId + '/children/' + idArr.join(','), 
+                function(data, textStatus, jqXHR) {
 				if(jqXHR.status == 200){
-					
 					alert("Student(er) Lagt til");
-					history.back();
-				} else {
+					//history.back();
+                    history.go(-1);
+               
+                } else {
 					alert(jqXHR.status + ': Fikk ikke lagt til studenter');
 				}
 				$.mobile.hidePageLoadingMsg();
 				
-			});
+                });
 		}
 	});
   

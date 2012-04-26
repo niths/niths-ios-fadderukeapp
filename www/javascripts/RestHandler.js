@@ -14,10 +14,8 @@
  *
  * });
  */
-
-
 function RestHandler(){
-  	this.baseUrl = 'http://10.110.73.75:8080/niths/';
+  	this.baseUrl = 'http://10.110.73.68:8080/niths/';
 	//this.baseUrl = 'http://ec2-46-137-44-111.eu-west-1.compute.amazonaws.com:8080/niths/';
 
     
