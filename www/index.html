@@ -48,9 +48,7 @@
         <script type="text/javascript"charset="utf-8"
             src="javascripts/common/ChildBrowser.js">
             </script>
-        
-        <script type="text/javascript", charset="utf-8"
-            src="javascripts/external/Native    Controls.js"></script>
+    
         
         <script type="text/javascript" charset="utf-8"
             src="javascripts/common/application.js">
@@ -58,7 +56,9 @@
         <script type="text/javascript" charset="utf-8"
             src="javascripts/external/md5.js">
             </script>
-        <script type="text/javascript" src="javascripts/common/dialog.js"></script>
+        <script type="text/javascript" charset="utf-8"
+            src="javascripts/common/dialog.js">
+            </script>
         <script type="text/javascript" charset="utf-8"
             src="javascripts/external/dialog-plugin.js">
             </script>
@@ -68,6 +68,16 @@
         <script type="text/javascript" charset="utf-8"
             src="javascripts/external/mobiscroll-1.6.min.js">
             </script>
+        
+        <script>
+            
+            function onBodyLoad()
+                   {
+         
+                document.addEventListener("deviceready", onDeviceReady, false);
+         
+            }
+</script>
     </head>
     <body>
         
@@ -140,7 +150,7 @@
                 		<li><a href="#" id="profilebtn" data-icon="info" data-iconpos="top">Profil</a></li>
 						<li><a href="#all-fadder-groups-page" id="myGroupBtn" data-icon="star" data-iconpos="top">Faddergrupper</a></li>
 						<li><a href="#program-page" data-icon="grid" data-iconpos="top">Program</a></li>
-                     <!--   <li><a href="#scan-qr-page" data-icon="grid" data-iconpos="top">qr</a></li>-->
+             <li><a href="#scan-qr-page" data-icon="grid" data-iconpos="top">qr</a></li>
                 	</ul>
             	</div>
             </div><!-- footer -->
@@ -564,9 +574,9 @@
             <link href="stylesheets/gallery/styles.css" type="text/css" rel="stylesheet" />
             <link href="stylesheets/gallery/photoswipe.css" type="text/css" rel="stylesheet" />
             <script type="text/javascript" charset="utf-8" src="javascripts/fb.js"></script>
-            <script type="text/javascript" src="javascripts/gallery/klass.min.js"></script>
-            <script type="text/javascript" src="javascripts/gallery/code.photoswipe.jquery-3.0.4.min.js"></script>
-            <script type="text/javascript">
+            <script type="text/javascript" charset="utf-8" src="javascripts/gallery/klass.min.js"></script>
+            <script type="text/javascript" charset="utf-8" src="javascripts/gallery/code.photoswipe.jquery-3.0.4.min.js"></script>
+            <script type="text/javascript" charset="utf-8">
                 /*
                  * IMPORTANT!!!
                  * REMEMBER TO ADD  rel="external"  to your anchor tags. 
@@ -634,7 +644,7 @@
         <!-- FADDER CHILDREN ADMIN PAGE -->
         
 	    <div data-role="page" data-theme="c" id="fadderchildren-pagen">
-            <script type="text/javascript"
+            <script type="text/javascript" charset="utf-8"
                 src="javascripts/admin/fadder-children.js">
                 </script>
             <header data-role="header" data-theme="b">
@@ -672,7 +682,7 @@
         <!-- CONFIRM DIALOG -->
         
         <div data-role="page" data-theme="c" id="confirm-dialog-page">
-            <script type="text/javascript"
+            <script type="text/javascript" charset="utf-8"
                 src="javascripts/admin/confirm.js">
                 </script>
             <header data-role="header" data-theme="c">
@@ -719,7 +729,7 @@
         
         
         <div data-role="page" data-theme="c" id="add-child-admin-page">
-            <script type="text/javascript"
+            <script type="text/javascript" charset="utf-8"
                 src="javascripts/admin/add-child-manually.js">
                 </script>
             <div data-role="header" data-theme="b">
