@@ -15,10 +15,11 @@
  * });
  */
 function RestHandler(){
-  	//this.baseUrl = 'http://10.110.73.68:8080/niths/';
-	//this.baseUrl = 'http://ec2-46-137-44-111.eu-west-1.compute.amazonaws.com:8080/niths/';
-    this.baseUrl ='http://192.168.1.2:8080/niths/';
-    
+  	// fbu this.baseUrl = 'http://10.110.73.68:8080/niths/';
+	// remote this.baseUrl = 'http://ec2-46-137-44-111.eu-west-1.compute.amazonaws.com:8080/niths/';
+    // home this.baseUrl ='http://192.168.1.2:8080/niths/';
+    // nith
+    this.baseUrl ='http://10.21.24.118:8080/niths/';
     
 	this.find = function(modelUrl, callbackSuccess, callbackError) {
 	    $.ajax({

@@ -139,8 +139,6 @@
 		NSURLRequest *request = webView.request;
 		[[UIApplication sharedApplication] openURL:request.URL];
 	}
-
-	 
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation) interfaceOrientation 

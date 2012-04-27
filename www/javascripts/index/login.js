@@ -109,20 +109,18 @@ $(document).ready(function() {
         'auth/login/',
         '{"token":"'+token+'"}',
         function(data, textStatus, jqXHR) {
-          showMsg('Du er innlogget', function() {
-            student = data;
-            sessionToken = jqXHR.getResponseHeader('session-token');
-
-            //If student is leader for a group, show admin btn
-            if(student.groupLeaders != null){ //NEEDED?
-              if(student.groupLeaders.length > 0){
-                $('#adminsectionbtn').css('display', 'block');
-              }
-            }
-
-            toggleBtnText();
-            $.mobile.hidePageLoadingMsg();
-          });
+                                   student = data;
+                                   sessionToken = jqXHR.getResponseHeader('session-token');
+                                   
+                                   //If student is leader for a group, show admin btn
+                                   if(student.groupLeaders != null){ //NEEDED?
+                                   if(student.groupLeaders.length > 0){
+                                   $('#adminsectionbtn').css('display', 'block');
+                                   }
+                                   }
+                                   
+                                   toggleBtnText();
+                                   $.mobile.hidePageLoadingMsg();
         },
         function(xhr, status, ex) {
           if(xhr.getResponseHeader('error') == 'Email not valid') {

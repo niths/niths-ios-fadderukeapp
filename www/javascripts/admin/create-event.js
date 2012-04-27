@@ -51,7 +51,7 @@ $("#admin-create-event-page").live('pageinit', function() {
             $.mobile.hidePageLoadingMsg();
             if (jqXHR.status == 201) {
                 showMsg('Event opprettet', function() {
-                    history.back();
+                    history.go(-1);
                 });
             } else {
                 showErr('Noe gikk galt', null);
