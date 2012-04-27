@@ -18,7 +18,7 @@
             $(document).bind("mobileinit", function() {
                              $.mobile.touchOverflowEnabled = true;
                              });
-            </script>
+            </script>   
         <script type="text/javascript" charset="utf-8"
             src="javascripts/external/jquery/jquery-mobile.js">
             </script>
@@ -31,10 +31,10 @@
         <script type="text/javascript" charset="utf-8"
             src="javascripts/external/jquery/jquery.mobile.scrollview.js">
             </script>
-        <script type="text/javascript" charset="utf-8"
+     <!--   <script type="text/javascript" charset="utf-8"
             src="javascripts/external/scrollview.js">
             </script>
-	    
+	    -->
         <!-- /Scrollview -->
         
         <script type="text/javascript" charset="utf-8"
@@ -136,7 +136,7 @@
             
             <div data-role="footer" data-position="fixed"  data-theme="b">
             	<div data-role="navbar">
-            		<ul>
+            		<ul data-role="mini">
                 		<li><a href="#" id="profilebtn" data-icon="info" data-iconpos="top">Profil</a></li>
 						<li><a href="#all-fadder-groups-page" id="myGroupBtn" data-icon="star" data-iconpos="top">Faddergrupper</a></li>
 						<li><a href="#program-page" data-icon="grid" data-iconpos="top">Program</a></li>
@@ -157,7 +157,7 @@
                 src="javascripts/index/event.js">
                 </script>
             <div data-role="header" data-theme="b">
-                <!-- <a href="#"  data-role="button" data-rel="back" class="ui-btn-left">Back</a>-->
+             
                 <h3>EVENT</h3>
             </div>
             
@@ -251,7 +251,7 @@
                         
                     </ul>
                 </div>
-				<div id="loadingGroupsMsgDiv"><img class="spin" src="stylesheets/common/images/loader.png" /></div>
+				<div id="loadingGroupsMsg2Div"><img class="spin" src="stylesheets/common/images/loader.png" /></div>
                 <br />
 			</div><!-- /content -->
             <div data-role="footer" data-position="fixed"  data-theme="b">
@@ -275,7 +275,7 @@
                 src="javascripts/index/single-fadder-group.js">
                 </script>
             
-			<div data-role="header" data-theme="b">
+			<div data-role="header" data-theme="b" data-position="fixed">
 				<h3>FADDERGRUPPE</h3>
 			</div>
             
@@ -319,7 +319,7 @@
                 src="javascripts/admin/admin.js">
                 </script>
             
-            <div data-role="header" data-theme="b">
+            <div data-role="header" data-theme="b" data-position="fixed">
                 <a href="#dashboard-page"  data-role="button" class="ui-btn-left">Back</a>
                 <h3>ADMIN</h3>
                 <a href="#"  id="refreshallbtn" data-role="button" class="ui-btn-right">Refresh</a>
@@ -363,7 +363,7 @@
                 
                 </script>
             
-            <div data-role="header" data-theme="b">
+            <div data-role="header" data-theme="b" data-position="fixed">
                 <a href="#admin-page"  data-role="button" class="ui-btn-left">Back</a>
                 <h3>ENDRE EVENT</h3>
             </div>
@@ -431,7 +431,7 @@
                 
                 </script>
             
-            <div data-role="header" data-theme="b">
+            <div data-role="header" data-theme="b" data-position="fixed">
                 <a href="#admin-page"  data-role="button" class="ui-btn-left">Back</a>
                 <h3>OPPRETT EVENT</h3>
             </div>
@@ -494,7 +494,7 @@
                 src="javascripts/profile.js">	
                 </script>
             
-            <div data-role="header" data-theme="b">
+            <div data-role="header" data-theme="b" data-position="fixed">
                 <a href="#dashboard-page"  data-role="button" class="ui-btn-left">Back</a>
                 <h3>PROFIL</h3>
             </div>
@@ -594,7 +594,7 @@
                  }(window, window.jQuery, window.Code.PhotoSwipe));
                 </script>
             
-            <div data-role="header" data-theme="b">
+            <div data-role="header" data-theme="b" data-position="fixed">
                 <a href="#dashboard-page" data-role="button" class="ui-btn-left">Back</a>
                 <h3>GALLERI</h3>
                 <a href="#" id="refreshGalleryBtn" data-role="button" class="ui-btn-right">Refresh</a>
@@ -636,7 +636,7 @@
             <script type="text/javascript" charset="utf-8"
                 src="javascripts/admin/fadder-children.js">
                 </script>
-            <header data-role="header" data-theme="b">
+            <header data-role="header" data-theme="b" data-position="fixed">
                 <a href="#admin-page"  data-role="button"  class="ui-btn-left">Back</a>
                 <h1>FADDERBARN</h1>
             </header>
@@ -690,7 +690,7 @@
             <script type="text/javascript"
                 src="javascripts/admin/send-email.js">
                 </script>
-            <header data-role="header" data-theme="b">
+            <header data-role="header" data-theme="b" data-position="fixed">
                 <a href="#fadderchildren-pagen"  data-role="button" class="ui-btn-left">Back</a>
                 <h1>SEND EPOST</h1>
             </header>
@@ -721,7 +721,7 @@
             <script type="text/javascript" charset="utf-8"
                 src="javascripts/admin/add-child-manually.js">
                 </script>
-            <div data-role="header" data-theme="b">
+            <div data-role="header" data-theme="b" data-position="fixed">
                <a href="#fadderchildren-pagen"  data-role="button" class="ui-btn-left">Back</a>
                 <h3>LEGG TIL BARN</h3>
             </div>

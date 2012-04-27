@@ -1291,6 +1291,11 @@ body.ui-mobile-viewport,div.ui-mobile-viewport {
 	top: .4em
 }
 
+#footer_id{
+    margin-bottom:20px;
+    height:60px;
+}
+
 .ui-header .ui-title,.ui-footer .ui-title {
 	min-height: 1.1em;
 	text-align: center;
@@ -1306,6 +1311,7 @@ body.ui-mobile-viewport,div.ui-mobile-viewport {
 
 .ui-footer .ui-title {
 	margin: .6em 15px .8em
+    font-size: 90px;
 }
 
 .ui-content {

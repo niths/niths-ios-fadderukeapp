@@ -26,7 +26,9 @@ $("#profile-page").live('pageinit', function() {
     
     $('#profilesubmit').click(function() {
         var restClient = new RestHandler(); //REST CLIENT
-        restClient.update('students', JSON.stringify($("#update-person-form").serializeObject()),  function(data, textStatus, jqXHR) {  
+        restClient.update('students',   
+           JSON.stringify($("#update-person-form").serializeObject()),
+                          function(data, textStatus, jqXHR) {  
             $.mobile.hidePageLoadingMsg();
             if(textStatus == "success"){
                 refreshStudentValues();

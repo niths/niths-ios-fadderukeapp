@@ -46,7 +46,7 @@ function deleteAnEvent(){
 	restClient.remove('events/' + $('#idE').val(),  function(data) {  
 		alert('Sletting vellykket');
 		$.mobile.hidePageLoadingMsg();
-  	  	history.back();
+  	  	$.mobile.changePage('#admin-page'); 
 	}); 
     
 	$('form').die('submit');
@@ -57,9 +57,14 @@ $("#admin-edit-event-page").live('pageshow', function() {
     
 	$('#editeventsubmit').click(function() {
 		var restClient = new RestHandler(); //REST CLIENT
+                                var isFirst = true;
 		restClient.update('events/', getDataFromForm(),  function(data, textStatus, jqXHR) {  
 			if(textStatus == "success"){
-				alert('Oppdatering vellykket');	
+                          if(isFirst){
+                           alert('Oppdatering vellykket');	
+                           $.mobile.changePage('#admin-page');   
+                           isFirst = false;
+                          }
 			}else{
 				alert("Oppdatering feilet");
 			}
@@ -99,7 +104,7 @@ function showData(event){
 	$('#description').val(event.description);
 	$('#startTime').val(event.startTime.replace('-', ' '));
 	$('#endTime').val(event.endTime.replace('-', ' '));
-    //	$('#tags').val(event.tags);
+
 	if(event.location != null){
 		$('#place').val(event.location.place);
 		$('#latitude').val(event.location.latitude);

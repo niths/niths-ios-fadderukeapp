@@ -11,7 +11,8 @@ $(document).bind( "pagebeforechange", function( e, data ) {
 			}
 		}
 	}
-});
+                      
+});  
 
 /**
  * Loads an event and shows info to user
