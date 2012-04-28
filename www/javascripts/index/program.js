@@ -2,7 +2,6 @@ $("#program-page").live('pageinit', function() {
 	var restClient = new RestHandler(); //REST CLIENT
 	loadAllEvents();
 	
-	//TODO: FIX SERVICESIDE
 	$("#privacyselectdiv input[type='radio']").bind( "change", function(event, ui) {
 		  var value = $("#privacyselectdiv input[type='radio']:checked").val();
 		  if(value =="private"){
@@ -11,16 +10,16 @@ $("#program-page").live('pageinit', function() {
 					$('#programlist').css('visibility', 'hidden');
 					loadAllEvents(true);
 			  }else{
-				  alert('Du har ingen gruppe');
-				  $("input[type='radio']:first").attr("checked",true).checkboxradio("refresh");
+                alert('Du har ingen gruppe');
+                $("input[type='radio']:first").attr("checked",true).checkboxradio("refresh");
 			  }
 			  //IF I HAVE A GROUP:
 			 //LOAD ALL EVENTS FOR MY GROUP  
 		  }else{ //PUBLIC
 			  //LOAD ALL PUBLIC EVENTS
 			  $('#loadingmsg2').css('display', 'block');
-				$('#programlist').css('visibility', 'hidden');
-				loadAllEvents(false);
+              $('#programlist').css('visibility', 'hidden');
+              loadAllEvents(false);
 		  }
 	});
 
@@ -70,13 +69,10 @@ $("#program-page").live('pageinit', function() {
 		}
 		
 		return param;
-		//events/tags-and-dates?tag=utvalg&startTime=10/04/2012-11:05
-		//events/dates?startTime=09/04/2010-10:55&endTime=09/04/2010-10:55
 	}
 
 	function loadAllEvents(isPrivate){
 		restClient.find('events/tags-and-dates' + getUrlParam(isPrivate),  function(data, status, e) {  
-//			restClient.find('events/dates' + getUrlParam(),  function(data, status, e) {  
 			if(status == 'success'){
 	    		  if(data.length > 0){
 	    			  handleData(data);		    			  
