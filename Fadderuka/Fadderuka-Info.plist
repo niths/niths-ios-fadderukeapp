@@ -9,13 +9,29 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
-	<string>icon.png</string>
+	<string>normal.png</string>
 	<key>CFBundleIconFiles</key>
 	<array>
 		<string>normal.png</string>
 		<string>retina.png</string>
 		<string>icon-72.png</string>
+		<string>Default@2x.png</string>
+		<string>Default.png</string>
 	</array>
+	<key>CFBundleIcons</key>
+	<dict>
+		<key>CFBundlePrimaryIcon</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string>normal.png</string>
+				<string>retina.png</string>
+				<string>icon-72.png</string>
+				<string>Default@2x.png</string>
+				<string>Default.png</string>
+			</array>
+		</dict>
+	</dict>
 	<key>CFBundleIdentifier</key>
 	<string>no.accenture.uka2011.niths</string>
 	<key>CFBundleInfoDictionaryVersion</key>
