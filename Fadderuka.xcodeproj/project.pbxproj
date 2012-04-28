@@ -46,6 +46,7 @@
 		19A6601815494A4E00504A6B /* retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 19A6601715494A4E00504A6B /* retina.png */; };
 		19A6601A154957E300504A6B /* ChildBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 19A66019154957E300504A6B /* ChildBrowser.bundle */; };
 		19A6602415496A1400504A6B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 19A6602315496A1400504A6B /* Default.png */; };
+		C9D577B4154C2D9E0013446A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D577B3154C2D9E0013446A /* Default@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,7 @@
 		19A6601715494A4E00504A6B /* retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = retina.png; sourceTree = "<group>"; };
 		19A66019154957E300504A6B /* ChildBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ChildBrowser.bundle; path = Plugins/ChildBrowser.bundle; sourceTree = "<group>"; };
 		19A6602315496A1400504A6B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		C9D577B3154C2D9E0013446A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 		198E7B2B1545670900A7DE6D = {
 			isa = PBXGroup;
 			children = (
+				C9D577B3154C2D9E0013446A /* Default@2x.png */,
 				19A6602315496A1400504A6B /* Default.png */,
 				19A6601715494A4E00504A6B /* retina.png */,
 				19A6601415494A3900504A6B /* normal.png */,
@@ -363,6 +366,7 @@
 				19A6601815494A4E00504A6B /* retina.png in Resources */,
 				19A6601A154957E300504A6B /* ChildBrowser.bundle in Resources */,
 				19A6602415496A1400504A6B /* Default.png in Resources */,
+				C9D577B4154C2D9E0013446A /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
