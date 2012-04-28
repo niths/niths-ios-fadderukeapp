@@ -58,7 +58,6 @@ $("#program-page").live('pageinit', function() {
 		} 
 		var today = dd+'/'+mm+'/'+yyyy + '-00:00';
 		var inFiveDays = (dd + 5) + '/'+mm+'/'+yyyy + '-23:59';
-//		var param = '?startTime='+today + '&endTime=' + inFiveDays;
 		var param = '';
 		if(isPrivate){
 			param = '?tag=fadderuka12,gruppe'+student.fadderGroup.groupNumber+'&startTime='+today + '&endTime=' + inFiveDays;
