@@ -1,29 +1,27 @@
+
+
 $("#program-page").live('pageinit', function() {
 	var restClient = new RestHandler(); //REST CLIENT
 	loadAllEvents();
-	
-	$("#privacyselectdiv input[type='radio']").bind( "change", function(event, ui) {
-		  var value = $("#privacyselectdiv input[type='radio']:checked").val();
-		  if(value =="private"){
-			  if(student.fadderGroup != null){
-				  $('#loadingmsg2').css('display', 'block');
-					$('#programlist').css('visibility', 'hidden');
-					loadAllEvents(true);
-			  }else{
-                alert('Du har ingen gruppe');
-                $("input[type='radio']:first").attr("checked",true).checkboxradio("refresh");
-			  }
-			  //IF I HAVE A GROUP:
-			 //LOAD ALL EVENTS FOR MY GROUP  
-		  }else{ //PUBLIC
-			  //LOAD ALL PUBLIC EVENTS
-			  $('#loadingmsg2').css('display', 'block');
-              $('#programlist').css('visibility', 'hidden');
-              loadAllEvents(false);
-		  }
-	});
+                    
+    $('#publicbtn').click(function(){
+        $('#loadingmsg2').css('display', 'block');
+        $('#programlist').css('visibility', 'hidden');
+        loadAllEvents(false);                       
+    });         
+                                          
+                        
+    $('#privatebtn').click(function(){
+        if(student.fadderGroup != null){
+            $('#loadingmsg2').css('display', 'block');
+            $('#programlist').css('visibility', 'hidden');
+            loadAllEvents(true);
+        }else{
+            alert('Du har ingen gruppe');
+        }
+    });         
 
-
+                     
 	function getDayName(day){
 		var weekday=new Array(7);
 		weekday[0]="S&Oslash;ndag";
@@ -34,7 +32,7 @@ $("#program-page").live('pageinit', function() {
 		weekday[5]="Fredag";
 		weekday[6]="L&Oslash;rdag";
 		return weekday[day];
-	}
+	} // get day name
 	
 	 
 	
@@ -68,7 +66,7 @@ $("#program-page").live('pageinit', function() {
 		}
 		
 		return param;
-	}
+	} // end get url param
 
 	function loadAllEvents(isPrivate){
 		restClient.find('events/tags-and-dates' + getUrlParam(isPrivate),  function(data, status, e) {  
@@ -88,11 +86,11 @@ $("#program-page").live('pageinit', function() {
 				$('#loadingmsg2').css('display', 'none');
 				$('#programlist').css('visibility', 'visible');
 		}); 
-	}
+	} // load all events
 	
 	function getHeader(date){
 		return '<h1 class="withborder">'+getDayName(date.getDay())+' '+date.getDate()+'/'+(date.getMonth()+1)+'</h1>';
-	}
+	}// get header
 
 	function getListElement(data){
 		return '<li class="li-first" id="eventloader">'+
@@ -101,11 +99,11 @@ $("#program-page").live('pageinit', function() {
 				'<p><strong>Beskrivelse: </strong>'+ data.description+'</p>'+
 				'<p><strong>Start: </strong>'+data.startTime+'</p>'+
 				'</a></li>';
-	}
+	} // get list element
 	
 	function getNewList(name){
 		return '<ul id="'+name+'" data-role="listview" class="ui-listview" data-inset="true">';
-	}
+	} // ge nre List
 	
 	function handleData(data){
 		var currentEventDate = new Date();
@@ -139,6 +137,6 @@ $("#program-page").live('pageinit', function() {
 		
 		$('#loadingmsg2').css('display', 'none');
 	    $('#programlist').css('visibility', 'visible');
-	}
+	} // handle data 
 	
 });
