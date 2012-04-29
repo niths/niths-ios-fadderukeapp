@@ -129,7 +129,7 @@
             	<div id="endcontent">
             		<p><strong>NITH</strong> - Norges Informasjonsteknologiske Høgskole AS <br />
 					<strong>Adr:</strong> Schweigaardsgate 14, 0185 Oslo<br />
-                    <strong>Tlf:</strong> 22 05 99 99<br />
+                    <strong>Tlf:</strong> 220 59 999<br />
                     <strong>Mail:</strong> oslo@nith.no<br />
                     <strong>Kontortid:</strong> 09.00 - 11.30 og 12.00 - 15.00</p>
                     <br />
@@ -203,13 +203,17 @@
             </div>
             
             <div data-role="content">
-                <div id="privacyselectdiv" >
+                <div id="privacyselectdiv">
                     <fieldset data-role="controlgroup" data-type="horizontal" >
-                        <input type="radio" name="groupPrivacy" id="publicEvents" value="public" checked="checked"/>
+                       <!-- <input type="radio" name="groupPrivacy" id="publicEvents" value="public" checked="checked"/>
                         <label for="publicEvents">Public</label>
                         <input type="radio" name="groupPrivacy" id="privateEvents" value="private" />
                         <label for="privateEvents">Private</label>
+                        -->
+                        <a id="publicbtn" href="#" data-role="button" class="ui-btn-left">public</a>
+                        <a id="privatebtn" href="#" data-role="button" class="ui-btn-right">private</a>
                     </fieldset>
+                    
                 </div>
                 <div id="loadingmsg2"><img class="spin" src="stylesheets/common/images/loader.png" /></div>
                 
