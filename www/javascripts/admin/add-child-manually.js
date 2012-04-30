@@ -17,12 +17,9 @@ function hideLoadingGrouplessStudents(){
 	$('#fadder-groupless-form').css('visibility', 'visible');
 }
 
-
-
-
 function loadGrouplessStudents(){
 	var restClient = new RestHandler();
-	restClient.find('fadder/groupless',  function(data) {  
+	restClient.findRestricted('fadder/groupless',  function(data) {  
 		traverseGrouplessStudents(data);
 	}, function(req, status, ex) {
 		alert('Greide ikke hente fadderbarn');
