@@ -1,4 +1,4 @@
-$("#all-fadder-groups-page").bind('pageinit', function() {
+$("#all-fadder-groups-page").bind('pageshow', function() {
                                   
                                   var restClient = new RestHandler(); //REST CLIENT
                                   loadFadderGroups();
@@ -7,32 +7,41 @@ $("#all-fadder-groups-page").bind('pageinit', function() {
                                                                          hideFadderList();
                                                                          loadFadderGroups();
                                                                          });
+                               
+                                 
                                   
                                   
                                   function loadFadderGroups() {
                                   $('#allGroupsUL').html('');
-                                  restClient.find('fadder',  function(data, status, e) {  
+                                  restClient.findRestricted('fadder',  function(data, status, e) {  
                                                   if(e.status == 200){
-                                                  traverseFadderGroups(data);
+                                                   traverseFadderGroups(data);
                                                   }else{
-                                                  showGroupErrMsg();
+                                                   showGroupErrMsg(e);
                                                   }
-                                                  }, showGroupErrMsg); 
+                                                            },function(e){showGroupErrMsg(e)}); 
                                   }
                                   
                                   
-                                  function showGroupErrMsg(){
-                                  $('#allGroupsUL').html('<li><h3>Ingen kontakt med server...</h3></li>');
-                                  showList();
+                                  function showGroupErrMsg(e){
+                                  if(e.status == 401){
+                                  
+                                  $('#allGroupsUL').html('<li><h3>Uautorisert</h3><h4>Trykk refresh etter du er innlogget</h4)</li>');
+                                  globalLogin();
+                                  }else{
+                                    $('#allGroupsUL').html('<li><h3>Ingen kontakt med server...</h3></li>');
+                                  }
+                                   
+                                   showList();
                                   }
                                   
                                   function showList(){
-                                  $('#loadingGroupsMsg2Div').css('display', 'none');
-                                  $('#allGroupsUL').css('visibility', 'visible');
+                                   $('#loadingGroupsMsg2Div').css('display', 'none');
+                                   $('#allGroupsUL').css('visibility', 'visible');
                                   }
                                   function hideFadderList(){
-                                  $('#allGroupsUL').css('visibility', 'hidden');
-                                  $('#loadingGroupsMsg2Div').css('display', 'block');
+                                   $('#allGroupsUL').css('visibility', 'hidden');
+                                   $('#loadingGroupsMsg2Div').css('display', 'block');
                                   }
                                   
                                   function traverseFadderGroups(fadderGroups) {

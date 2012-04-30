@@ -24,7 +24,9 @@ $('#scan-qr-page').live('pageinit', function() {
                                                               imageURI, restClient.baseUrl + 'fadder/scan-qr-code/' + student.id,
                                                               function(res) {
                                                               $.mobile.hidePageLoadingMsg();
+                                
                                                               if(res.responseCode == 200) {
+                                                              
                                                               getGroupStudentWasAddedTo();
                                                               } else {
                                                               showErr('Beklager, noe er galt med QR koden', null);
@@ -38,15 +40,17 @@ $('#scan-qr-page').live('pageinit', function() {
                                                     }
                                                     
                                                     function getGroupStudentWasAddedTo() {
+                                                 
                                                     restClient.findRestricted(
                                                                               'students/' + student.id,
                                                                               function(data, textStatus, jqXHR) {  
                                                                               $.mobile.hidePageLoadingMsg();
+                                                                            
                                                                               if(jqXHR.status == '200'){
                                                                               student = data;
-                                                                              showErr(
+                                                                              showMsg(
                                                                                       'Du er i gruppe: ' + student.fadderGroup.groupNumber, null);  
-                                                                              history.back();
+                                                                              history.go(-1);                                                                              //$.mobile.changePage('#profile-page');
                                                                               } else {  
                                                                               showErr('Beklager, en feil skjedde', null);
                                                                               }

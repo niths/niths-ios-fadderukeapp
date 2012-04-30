@@ -53,7 +53,7 @@ function deleteAnEvent(){
     return false;
 }
 
-$("#admin-edit-event-page").live('pageshow', function() {	
+$("#admin-edit-event-page").live('pageinit', function() {	
     
 	$('#editeventsubmit').click(function() {
 		var restClient = new RestHandler(); //REST CLIENT

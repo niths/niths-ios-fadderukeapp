@@ -14,19 +14,23 @@ $(document).ready(function() {
   var isNITHMail       = false;
 
     
-  $('#loginbtn').click(function() {
-   ChildBrowser.install();
-    if(sessionToken == '') { //Not signed in
-      resetUserValues();
-      signIn();       
-    } else { //Already signed in
-      resetUserValues();
-        configureLocationChanged();
-      window.plugins.childBrowser.showWebPage(
-          'https://accounts.google.com/Logout');
-    }
-  });
+                globalLogin = function() {
+                  ChildBrowser.install();
+                  if(sessionToken == '') { //Not signed in
+                  resetUserValues();
+                  signIn();       
+                  } else { //Already signed in
+                  resetUserValues();
+                  configureLocationChanged();
+                  window.plugins.childBrowser.showWebPage(
+                                                          'https://accounts.google.com/Logout');
+                  }
+                  }                
+                  
+                  $('#loginbtn').click(globalLogin);
 
+                  
+                  
    $('#profilebtn').click(function() {
     ChildBrowser.install();
 
@@ -75,7 +79,6 @@ $(document).ready(function() {
       } else if (receiveTokenURL.test(url)) {
           window.plugins.childBrowser.close();
           onLoggedIn(url.split('=').splice(2, 1)[0].replace('&token_type', ''));
-
       // Triggered when a user logs out
       } else if (url == 'https://accounts.google.com/Login') {
         window.plugins.childBrowser.close();
@@ -129,7 +132,7 @@ $(document).ready(function() {
           } else if (status == 'timeout') {
             showErr('Fikk ikke kontakt med serveren, logg inn igjen (timeout)');
           } else {
-            showErr('En feil intraff');
+            showErr('En feil intraff status:' +status + ex);
         }
 
         toggleBtnText();

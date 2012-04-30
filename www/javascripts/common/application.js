@@ -1,4 +1,4 @@
-address = 'http://ec2-46-137-44-111.eu-west-1.compute.amazonaws.com:8080/niths/';
+address = 'http://ec2-46-137-46-84.eu-west-1.compute.amazonaws.com:8080/niths/';
 
 student = {};
 sessionToken = '';
