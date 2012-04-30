@@ -1,4 +1,4 @@
-$("#all-fadder-groups-page").bind('pageshow', function() {
+$("#all-fadder-groups-page").bind('pageinit', function() {
                                   
                                   var restClient = new RestHandler(); //REST CLIENT
                                   loadFadderGroups();
@@ -26,7 +26,7 @@ $("#all-fadder-groups-page").bind('pageshow', function() {
                                   function showGroupErrMsg(e){
                                   if(e.status == 401){
                                   
-                                  $('#allGroupsUL').html('<li><h3>Uautorisert</h3><h4>Trykk refresh etter du er innlogget</h4)</li>');
+                                  $('#allGroupsUL').html('<li><h3>Uautorisert bruker</h3><h4>Trykk Oppdater etter du er innlogget</h4)</li>');
                                   globalLogin();
                                   }else{
                                     $('#allGroupsUL').html('<li><h3>Ingen kontakt med server...</h3></li>');

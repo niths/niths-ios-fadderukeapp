@@ -102,14 +102,14 @@
             		<div class="listbtns">
 						<a href="" data-role="button" id="resfresheventsbtn" 
                             data-icon="refresh" data-inline="true" 
-                            data-iconpos="notext" >Refresh</a>
+                            data-iconpos="notext" >Oppdater</a>
 					</div>
                 </div><!-- /events -->
                 
                 <!-- TODO: create a better looking button -->
                 <div id="imagesholder" >
                     <h1 class="withborder">Siste bilder</h1>
-                    <a href="#Gallery1" data-role="button" >Gallery</a>
+                    <a href="#Gallery1" data-role="button" >Bildegalleri</a>
                 </div><!--end images-->
                 
                 <div id="twitter" class="current">
@@ -123,7 +123,7 @@
             	<div class="listbtns">
                     <a href="" data-role="button" id="refreshtweetbtn" 
                         data-icon="refresh" data-iconpos="notext" 
-                        data-inline="true" >Refresh</a>
+                        data-inline="true" >Oppdater</a>
             	</div>
                 
             	<div id="endcontent">
@@ -197,24 +197,15 @@
                 src="javascripts/index/program.js">
                 </script>
             
-            <div data-role="header" data-theme="b">
-                <!-- <a href="#dashboard-page"  data-role="button" data-rel="back" class="ui-btn-left">Back</a>-->
+            <div data-role="header" data-theme="b" data-position="fixed">
+                <a id="publicbtn" href="#" data-role="button" class="ui-btn-left">Offentlig</a>
+                <a id="privatebtn" href="#" data-role="button" class="ui-btn-right">Privat</a>
+                
                 <h3>PROGRAM</h3>
             </div>
             
             <div data-role="content">
-                <div id="privacyselectdiv">
-                    <fieldset data-role="controlgroup" data-type="horizontal" >
-                       <!-- <input type="radio" name="groupPrivacy" id="publicEvents" value="public" checked="checked"/>
-                        <label for="publicEvents">Public</label>
-                        <input type="radio" name="groupPrivacy" id="privateEvents" value="private" />
-                        <label for="privateEvents">Private</label>
-                        -->
-                        <a id="publicbtn" href="#" data-role="button" class="ui-btn-left">public</a>
-                        <a id="privatebtn" href="#" data-role="button" class="ui-btn-right">private</a>
-                    </fieldset>
-                    
-                </div>
+         
                 <div id="loadingmsg2"><img class="spin" src="stylesheets/common/images/loader.png" /></div>
                 
                 <div id="programlist">
@@ -244,13 +235,13 @@
                 src="javascripts/index/all-fadder-groups.js">
                 </script>
             
-			<div data-role="header" data-theme="b">
+			<div data-role="header" data-position="fixed" data-theme="b">
 				<h3>ALLE GRUPPER</h3>
-				<a href="#" id="refreshFadderGroupsListBtn" data-role="button" class="ui-btn-right">Refresh</a>
+				<a href="#" id="refreshFadderGroupsListBtn" data-role="button" class="ui-btn-right">Oppdater</a>
 			</div>
             
 			<div data-role="content" >
-                <h1 class="withborder">faddergrupper</h1>
+                <h1 class="withborder">Faddergrupper</h1>
                 
                 <div id="allGroupsGUI">
                     <ul id=allGroupsUL>
@@ -274,8 +265,6 @@
 		
 		<!-- SINGLE FADDER GROUP PAGE -->
 		<!-- Shows information about a specific group -->
-		
-		
 		<div data-role="page" data-theme="c" id="single-fadder-group-page">
 			<script type="text/javascript" charset="utf-8"
                 src="javascripts/index/single-fadder-group.js">
@@ -286,7 +275,7 @@
 			</div>
             
 			<div data-role="content" data-scroll="y">	
-				<h1 id="agroupheader" class="withborder">gruppe</h1>	
+				<h1 id="agroupheader" class="withborder">Gruppe</h1>	
 				
 				<div id="loadinggroupmsgdiv"><img class="spin" src="stylesheets/common/images/loader.png" /></div>
 				
@@ -304,7 +293,6 @@
                     <ul>
                         <li><a href="#dashboard-page" id="profilebtn" data-icon="info" data-iconpos="top">Dashboard</a></li>
                         <li><a href="#all-fadder-groups-page" id="myGroupBtn" data-icon="star" data-iconpos="top">Faddergrupper</a></li>
-                    
                         <li><a href="#program-page" data-icon="grid" data-iconpos="top">Program</a></li>
                     </ul>
                 </div>
@@ -314,8 +302,6 @@
 		
 		
 		<!-- ADMIN SECTION -->
-		
-		
 		<!-- FADDER LEADER SECTION -->
 		
         <div data-role="page" data-theme="c" id="admin-page">
@@ -326,9 +312,9 @@
                 </script>
             
             <div data-role="header" data-theme="b" data-position="fixed">
-                <a href="#dashboard-page"  data-role="button" class="ui-btn-left">Back</a>
+                <a href="#dashboard-page"  data-role="button" class="ui-btn-left">Tilbake</a>
                 <h3>ADMIN</h3>
-                <a href="#"  id="refreshallbtn" data-role="button" class="ui-btn-right">Refresh</a>
+                <a href="#"  id="refreshallbtn" data-role="button" class="ui-btn-right">Oppdater</a>
             </div>
             
             <div data-role="content" id="admincontent">
@@ -342,7 +328,7 @@
                 <div id="loadigForAllGroupsEventsList"><img class="spin" src="stylesheets/common/images/loader.png" /></div>
                 <ul id ="allGroupsEventsList" data-role="listview" class="ui-listview" data-inset="true">
                 </ul>
-                <h1 class="withborder">Public</h1>
+                <h1 class="withborder">Offentlig</h1>
                 <div id="loadinforallevents"><img class="spin" src="stylesheets/common/images/loader.png" /></div>
                 <ul id ="alleventlist" data-role="listview" class="ui-listview" data-inset="true">
                 </ul>
@@ -370,7 +356,7 @@
                 </script>
             
             <div data-role="header" data-theme="b" data-position="fixed">
-                <a href="#admin-page"  data-role="button" class="ui-btn-left">Back</a>
+                <a href="#admin-page"  data-role="button" class="ui-btn-left">Tilbake</a>
                 <h3>ENDRE EVENT</h3>
             </div>
             <div data-role="content">
@@ -438,7 +424,7 @@
                 </script>
             
             <div data-role="header" data-theme="b" data-position="fixed">
-                <a href="#admin-page"  data-role="button" class="ui-btn-left">Back</a>
+                <a href="#admin-page"  data-role="button" class="ui-btn-left">Tilbake</a>
                 <h3>OPPRETT EVENT</h3>
             </div>
             <div data-role="content">
@@ -501,7 +487,7 @@
                 </script>
             
             <div data-role="header" data-theme="b" data-position="fixed">
-                <a href="#dashboard-page"  data-role="button" class="ui-btn-left">Back</a>
+                <a href="#dashboard-page"  data-role="button" class="ui-btn-left">Tilbake</a>
                 <h3>PROFIL</h3>
             </div>
             
@@ -601,9 +587,9 @@
                 </script>
             
             <div data-role="header" data-theme="b" data-position="fixed">
-                <a href="#dashboard-page" data-role="button" class="ui-btn-left">Back</a>
+                <a href="#dashboard-page" data-role="button" class="ui-btn-left">Tilbake</a>
                 <h3>GALLERI</h3>
-                <a href="#" id="refreshGalleryBtn" data-role="button" class="ui-btn-right">Refresh</a>
+                <a href="#" id="refreshGalleryBtn" data-role="button" class="ui-btn-right">Oppdater</a>
             </div>
             
             <div data-role="content">	
@@ -625,7 +611,7 @@
             <script type="text/javascript" charset="utf-8"
                 src="javascripts/qr-code.js"></script>
             <header data-role="header" data-theme="b">
-                <a href="#profile-page" data-role="button" class="ui-btn-left">Back</a>
+                <a href="#profile-page" data-role="button" class="ui-btn-left">Tilbake</a>
                 <h1>QR-kode</h1>
             </header>
             <div data-role="content">
@@ -643,7 +629,7 @@
                 src="javascripts/admin/fadder-children.js">
                 </script>
             <header data-role="header" data-theme="b" data-position="fixed">
-                <a href="#admin-page"  data-role="button"  class="ui-btn-left">Back</a>
+                <a href="#admin-page"  data-role="button"  class="ui-btn-left">Tilbake</a>
                 <h1>FADDERBARN</h1>
             </header>
             <div data-role="content">
@@ -697,7 +683,7 @@
                 src="javascripts/admin/send-email.js">
                 </script>
             <header data-role="header" data-theme="b" data-position="fixed">
-                <a href="#fadderchildren-pagen"  data-role="button" class="ui-btn-left">Back</a>
+                <a href="#fadderchildren-pagen"  data-role="button" class="ui-btn-left">Tilbake</a>
                 <h1>SEND EPOST</h1>
             </header>
             <div data-role="content">
@@ -728,7 +714,7 @@
                 src="javascripts/admin/add-child-manually.js">
                 </script>
             <div data-role="header" data-theme="b" data-position="fixed">
-               <a href="#fadderchildren-pagen"  data-role="button" class="ui-btn-left">Back</a>
+               <a href="#fadderchildren-pagen"  data-role="button" class="ui-btn-left">Tilbake</a>
                 <h3>LEGG TIL BARN</h3>
             </div>
             
