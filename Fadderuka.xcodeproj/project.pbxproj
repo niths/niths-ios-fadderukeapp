@@ -505,7 +505,7 @@
 					"CORDOVA_FRAMEWORK=1",
 				);
 				INFOPLIST_FILE = "Fadderuka/Fadderuka-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,
@@ -537,7 +537,7 @@
 				);
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SRCROOT)/**";
 				INFOPLIST_FILE = "Fadderuka/Fadderuka-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,

@@ -83,7 +83,7 @@ function printUserInfo(){
 	if(student.fadderGroup != null){
 		$('#faddergroup').html('<a class="blacklink" href="#single-fadder-group-page?group-id='+student.fadderGroup.id+'">' + student.fadderGroup.groupNumber + '</a>');
 	}else{
-		$('#faddergroup').html('<a class="blacklink" href="#scan-qr-page">Trykk her</a>');
+		$('#faddergroup').html('<a class="blacklink" href="#scan-qr-page" data-role="button">Trykk her</a>');
 	}
     
 	showProfile();
