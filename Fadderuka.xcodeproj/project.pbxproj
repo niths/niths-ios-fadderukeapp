@@ -319,6 +319,7 @@
 		198E7B2D1545670900A7DE6D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "Accenture AS";
 			};
 			buildConfigurationList = 198E7B301545670900A7DE6D /* Build configuration list for PBXProject "Fadderuka" */;
@@ -466,6 +467,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -483,6 +485,7 @@
 				);
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -504,6 +507,7 @@
 					"DEBUG=1,",
 					"CORDOVA_FRAMEWORK=1",
 				);
+				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Fadderuka/Fadderuka-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_LDFLAGS = (
@@ -535,6 +539,7 @@
 					"NDEBUG=1,",
 					"CORDOVA_FRAMEWORK=1",
 				);
+				GCC_THUMB_SUPPORT = NO;
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SRCROOT)/**";
 				INFOPLIST_FILE = "Fadderuka/Fadderuka-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
