@@ -1,14 +1,16 @@
+var locations = '';
+var currentLocationIndex = '';
+
 $("#admin-create-event-page").live('pageshow', function() {
-    $('#name2').val('');
-    $('#description2').val('');
-    var dateToday = getDateTodayAsString();
-    $('#startTime2').val(dateToday);
-    $('#endTime2').val(dateToday);
-    $('#place2').val('NITH');
-    $('#latitude2').val('59.908671');
-    $('#longitude2').val('10.768166');
-    
-});
+                                   $('#name2').val('');
+                                   $('#description2').val('');
+                                   var dateToday = getDateTodayAsString();
+                                   $('#startTime2').val(dateToday);
+                                   $('#endTime2').val(dateToday);
+                                   $('#place2').val('Scheigaards gate 14');
+                                   
+                                   locationSearch('#place2','#create-event-location-selection');  
+                                   });
 
 function getDateTodayAsString(){
     var today = new Date();
@@ -26,41 +28,90 @@ function getDateTodayAsString(){
     return today;
 }
 
-$("#admin-create-event-page").live('pageinit', function() {  
+
+function locationSearch(inputField,dropDown){
+ 
+    
+    $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address=' +
+         $('#place2').val() + '&sensor=true',
+          function(data) {
+          locations = data.results;
+          $.each(locations, function(key, location) {
+                 
+                 // Extract the country from the formatted address
+                 var address = location.formatted_address.split(/,/g);
+                 console.log('address '+ address);
+                 
+                 var country = $.trim(address[address.length - 1]);
+                 console.log('country ' + country);
+                 // Only include locations that are in Norway
+                 if (location.formatted_address != 'undefined'
+                     && (country == 'Norge' || country == 'Norway')) {
+                 $(dropDown).append('<option id="location-' +key +
+                                    '" value="' + location.formatted_address + '">' +
+                                    location.formatted_address +
+                                    '</option>');
+                  
+                 }
+                 });
+          });
+} 
+
+$("#admin-create-event-page").live('pageinit', function() {
+                                         
     var restClient = new RestHandler(); //REST CLIENT
     var privacyDisplay = 
-    '<label for="select-privacy" class="select">Velg:</label>'+
-    '<select name="select-privacy" id="select-privacy-choice2">'+
-    '<option value="public">Public</option>';
-    for (var i = 0; i < student.groupLeaders.length; i++){
-        privacyDisplay +=
-        '<option value="' + student.groupLeaders[i].groupNumber+'">' +
+    '<label for="select-privacy" class="select">Velg:</htmlEncode>'+
+            '<select name="select-privacy" id="select-privacy-choice2">'+
+            '<option value="public">Public</option>';
+        for (var i = 0; i < student.groupLeaders.length; i++){
+    privacyDisplay +=
+            '<option value="' + student.groupLeaders[i].groupNumber+'">' +
         'For gruppe: ' + student.groupLeaders[i].groupNumber+
-        '</option>';
-    }
+            '</option>';
+                }
     privacyDisplay += '</select>';
-    $('#privacy2').html(privacyDisplay);
-    $('#select-privacy-choice2').selectmenu();
-    
-    $('#createeventsubmit').click(function() {
-        
-        restClient.create(
-        'events/',
-        getDataFromCreateForm(),
-        function(data, textStatus, jqXHR) {
-            $.mobile.hidePageLoadingMsg();
-            if (jqXHR.status == 201) {
-                showMsg('Event opprettet', function() {
-                    history.go(-1);
-                });
-            } else {
-                showErr('Noe gikk galt', null);
-            }
-        }
+            $('#privacy2').html(privacyDisplay);
+            $('#select-privacy-choice2').selectmenu();
+
+                                   // Handle location searching
+    $('#place2').keyup(function() {
+                       
+        $('#create-event-location-selection').empty();
+                       
+        $('#create-event-location-selection').append( '<option id="location+1'+
+                                                                    '" value="Velg en lokasjon">' +
+                                                                    'Velg en lokasjon' +
+                                                                    '</option>');
+        locationSearch('#place2','#create-event-location-selection');
+        }).keyup();
+                                   
+            $('#create-event-location-selection').selectmenu();
+                           
+            $('#create-event-location-selection').change(function() {
+                // Extract the current index of the location
+                currentLocationIndex = /location-(\d+)/.exec(
+                $('#create-event-location-selection option:selected').attr('id'))[1];
+                    });
+                
+                $('#createeventsubmit').click(function() {
+                                                            
+                    restClient.create(
+                        'events/',
+                            getDataFromCreateForm(),
+                function(data, textStatus, jqXHR) {
+                    $.mobile.hidePageLoadingMsg();
+                    if (jqXHR.status == 201) {
+                    showMsg('Event opprettet', function() {
+                            history.go(-1);
+                                });
+                    } else {
+                        showErr('Noe gikk galt', null);
+                    }
+                    }
         ); 
-        
-        $('form').die('submit');
-        return false;
+
+    return false;
     });
 });
 
@@ -84,15 +135,12 @@ function getDataFromCreateForm() {
         json += ', gruppe' + priv +'"';      
     }
     
-    if($('#place2').val() != ''
-    && $('#latitude2').val() != ''
-    && $('#longitude2').val() != '') {
-        json += ', "location": {'+
-        '"place": "' + htmlEncode($('#place2').val()) + '",'+
-        '"latitude": '+htmlEncode($('#latitude2').val())+','+
-        '"longitude": ' + htmlEncode($('#longitude2').val()) +
-        '}';
-    }
+    var currentLocation = locations[currentLocationIndex];
+    json += ', "location": {'+
+    '"place": "'    + currentLocation.formatted_address + '",' +
+    '"latitude": '  + currentLocation.geometry.location.lat + ',' +
+    '"longitude": ' + currentLocation.geometry.location.lng +
+    '}';
     
     json += '}';
     return json;
