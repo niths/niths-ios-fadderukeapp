@@ -66,19 +66,19 @@ $("#fadderchildren-pagen").live('pageshow', function() {
      
          $('<div>').simpledialog2({
          mode: 'button',
-            headerText: 'Slett event',
+            headerText: 'Slett Student(er)',
     headerClose: true,
         buttonPrompt: 'Er du sikker?',
         buttons : {
             'OK': {
              click: function () { 
-               $('#buttonoutput').text('Ok');
+               //$('#buttonoutput').text('Ok');
                deleteStudents();
              }
             },
             'Avbryt': {
               click: function () { 
-               $('#buttonoutput').text('Avbry');
+                //$('#buttonoutput').text('Avbry');
               },
               icon: "delete",
               theme: "c"
