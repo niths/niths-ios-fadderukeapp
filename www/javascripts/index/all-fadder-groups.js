@@ -14,24 +14,23 @@ $("#all-fadder-groups-page").bind('pageinit', function() {
                                   function loadFadderGroups() {
                                   $('#allGroupsUL').html('');
                                   restClient.findRestricted('fadder',  function(data, status, e) {  
+                                                            console.log(e.status + ' -status');
                                                   if(e.status == 200){
                                                    traverseFadderGroups(data);
                                                   }else{
                                                    showGroupErrMsg(e);
                                                   }
-                                                            },function(e){showGroupErrMsg(e)}); 
+                                            },function(e){showGroupErrMsg(e)}); 
                                   }
                                   
                                   
                                   function showGroupErrMsg(e){
                                   if(e.status == 401){
-                                  
-                                  $('#allGroupsUL').html('<li><h3>Uautorisert bruker</h3><h4>Trykk Oppdater etter du er innlogget</h4)</li>');
-                                  globalLogin();
+                                    $('#allGroupsUL').html('<li><h3>Uautorisert bruker</h3><h4>Trykk Oppdater etter du er innlogget</h4)</li>');
+                                        globalLogin();
                                   }else{
                                     $('#allGroupsUL').html('<li><h3>Ingen kontakt med server...</h3></li>');
                                   }
-                                   
                                    showList();
                                   }
                                   

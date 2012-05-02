@@ -15,8 +15,8 @@
  * });
  */
 function RestHandler(){
-    this.baseUrl = 'http://10.21.24.136:8080/niths/'; // Ben
-//    this.baseUrl = 'http://10.110.74.52:8080/niths/';
+ //   this.baseUrl = 'http://10.21.24.136:8080/niths/'; // Ben
+    this.baseUrl = 'http://10.110.73.61:8080/niths/';
     
     //this.baseUrl = 'http://ec2-46-137-44-111.eu-west-1.compute.amazonaws.com:8080/niths/';
     
@@ -28,7 +28,7 @@ function RestHandler(){
                cache: false,
                success: callbackSuccess,
                error: callbackError,
-               timeout:5000
+               timeout:10000
                });
     }; //End find
     
@@ -44,10 +44,11 @@ function RestHandler(){
                xhr.setRequestHeader("Developer-key", developerKey);
                xhr.setRequestHeader("Developer-token", developerToken);
                xhr.setRequestHeader("Session-token", sessionToken);
+               
                },
                success: callbackSuccess,
                error: callbackError,
-               timeout:5000
+               timeout:10000
                });
     }; //End find
     
@@ -68,7 +69,7 @@ function RestHandler(){
                error: function(jqXHR, textStatus, errorThrown){
                handleError(errorThrown, jqXHR);
                },
-               timeout:5000
+               timeout:10000
                });
     }; //End remove
     
@@ -91,7 +92,7 @@ function RestHandler(){
                error: function(jqXHR, textStatus, errorThrown){
                handleError(errorThrown, jqXHR);
                },
-               timeout:5000
+               timeout:10000
                });
     }; //End update
     this.updateURL = function(modelUrl, callbackSuccess) {
@@ -112,7 +113,7 @@ function RestHandler(){
                error: function(jqXHR, textStatus, errorThrown){
                handleError(errorThrown, jqXHR);
                },
-               timeout:5000
+               timeout:10000
                });
     }; //End update
     this.updateWithCallbacks = function(modelUrl, json, callbackSuccess, callbackError) {
@@ -132,7 +133,7 @@ function RestHandler(){
                },
                success: callbackSuccess,
                error: callbackError,
-               timeout:5000
+               timeout:10000
                });
     }; //End update
     
@@ -158,6 +159,8 @@ function RestHandler(){
                timeout:10000
                });
     }; //End update
+    
+    
     
     function handleError(errorThrown, jqXHR){
         $.mobile.hidePageLoadingMsg();
