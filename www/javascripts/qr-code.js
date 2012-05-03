@@ -50,7 +50,6 @@ $('#scan-qr-page').live('pageinit', function() {
                                                                               student = data;
                                                                               showMsg(
                                                                                       'Du er i gruppe: ' + student.fadderGroup.groupNumber, null);  
-                                                                              history.go(-1);                                                                              //$.mobile.changePage('#profile-page');
                                                                               } else {  
                                                                               showErr('Beklager, en feil skjedde', null);
                                                                               }
