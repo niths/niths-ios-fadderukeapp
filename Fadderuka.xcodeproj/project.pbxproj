@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		191660831559504400F93244 /* Application.js in Sources */ = {isa = PBXBuildFile; fileRef = 191660821559504300F93244 /* Application.js */; };
 		19888FEB1546CF37009B7138 /* ChildBrowserCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 19888FE61546CF37009B7138 /* ChildBrowserCommand.m */; };
 		19888FEC1546CF37009B7138 /* ChildBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19888FE81546CF37009B7138 /* ChildBrowserViewController.m */; };
 		19888FED1546CF37009B7138 /* ChildBrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19888FE91546CF37009B7138 /* ChildBrowserViewController.xib */; };
@@ -51,7 +50,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		191660821559504300F93244 /* Application.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = Application.js; path = www/javascripts/common/Application.js; sourceTree = "<group>"; };
 		19888FE51546CF37009B7138 /* ChildBrowserCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChildBrowserCommand.h; path = Plugins/ChildBrowserCommand.h; sourceTree = "<group>"; };
 		19888FE61546CF37009B7138 /* ChildBrowserCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChildBrowserCommand.m; path = Plugins/ChildBrowserCommand.m; sourceTree = "<group>"; };
 		19888FE71546CF37009B7138 /* ChildBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChildBrowserViewController.h; path = Plugins/ChildBrowserViewController.h; sourceTree = "<group>"; };
@@ -137,7 +135,6 @@
 		198E7B2B1545670900A7DE6D = {
 			isa = PBXGroup;
 			children = (
-				191660821559504300F93244 /* Application.js */,
 				C9D577B3154C2D9E0013446A /* Default@2x.png */,
 				19A6602315496A1400504A6B /* Default.png */,
 				19A6601715494A4E00504A6B /* retina.png */,
@@ -402,7 +399,6 @@
 				198E7B891545670A00A7DE6D /* MainViewController.m in Sources */,
 				19888FEB1546CF37009B7138 /* ChildBrowserCommand.m in Sources */,
 				19888FEC1546CF37009B7138 /* ChildBrowserViewController.m in Sources */,
-				191660831559504400F93244 /* Application.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
