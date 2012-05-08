@@ -15,9 +15,6 @@
  * });
  */
 function RestHandler(){
- //   this.baseUrl = 'http://10.21.24.136:8080/niths/'; // Ben
-   // this.baseUrl = 'http://10.110.73.61:8080/niths/';
-    
     this.baseUrl = 'http://ec2-46-137-46-84.eu-west-1.compute.amazonaws.com:8080/niths/';
     
     this.find = function(modelUrl, callbackSuccess, callbackError) {
