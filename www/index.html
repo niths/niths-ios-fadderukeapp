@@ -13,57 +13,67 @@
         <link href="stylesheets/common/mobiscroll-1.6.min.css"
         rel="stylesheet" type="text/css" />
         
-        <script type="text/javascript" charset="utf-8"
-            src="javascripts/external/jquery/jquery.js"></script>
         <script type="text/javascript" charset="utf-8">
             $(document).bind("mobileinit", function() {
                              $.mobile.touchOverflowEnabled = true;
                              });
-            </script>   
+        </script>   
+        
+        <!--external-->
+        <script type="text/javascript" charset="utf-8"
+            src="javascripts/external/jquery/jquery.js"></script>
+
         <script type="text/javascript" charset="utf-8"
             src="javascripts/external/jquery/jquery-mobile.js">
-            </script>
+        </script>
         
         <!-- Scrollview -->
-        
         <script type="text/javascript" charset="utf-8"
             src="javascripts/external/jquery/jquery.easing.1.3.js">
             </script>
+        
         <script type="text/javascript" charset="utf-8"
             src="javascripts/external/jquery/jquery.mobile.scrollview.js">
             </script>
         <!-- /Scrollview -->
         
-        <script type="text/javascript" charset="utf-8"
-            src="javascripts/external/jsoauth.js">
-            </script>
+    
         <!-- cordova 1.6.1-->
         <script type="text/javascript" charset="utf-8"
             src="javascripts/external/cordova-1.6.1.js">
             </script>
         <!-- child browser -->
         <script type="text/javascript"charset="utf-8"
-            src="javascripts/common/ChildBrowser.js">
+            src="javascripts/external/ChildBrowser.js">
             </script>
         
         <script type="text/javascript" charset="utf-8"
-            src="javascripts/common/application.js">
-            </script>
-        <script type="text/javascript" charset="utf-8"
             src="javascripts/external/md5.js">
             </script>
-        <script type="text/javascript" charset="utf-8"
-            src="javascripts/common/dialog.js">
-            </script>
+        
         <script type="text/javascript" charset="utf-8"
             src="javascripts/external/dialog-plugin.js">
             </script>
-        <script type="text/javascript" charset="utf-8"
-            src="javascripts/RestHandler.js">
-            </script>
+        
+        
         <script type="text/javascript" charset="utf-8"
             src="javascripts/external/mobiscroll-1.6.min.js">
             </script>
+        
+        <!--common-->
+        <script type="text/javascript" charset="utf-8"
+            src="javascripts/common/application.js">
+            </script>
+        
+        
+        <script type="text/javascript" charset="utf-8"
+            src="javascripts/common/dialog.js">
+            </script>
+       
+        <script type="text/javascript" charset="utf-8"
+            src="javascripts/RestHandler.js">
+            </script>
+    
     </head>
     <body>
         
@@ -83,7 +93,7 @@
                 src="javascripts/index/login.js">
                 </script>
             <div  data-role="header" data-position="fixed" data-theme="b">
-            
+                
                 <a href="" id="loginbtn" data-role="button" class="ui-btn-right">Logg inn</a>
                 <h3>NITHS</h3>
                 <a id="adminsectionbtn" href="#admin-page" data-role="button" class="ui-btn-left">admin</a>
@@ -114,7 +124,7 @@
                 <div id="twitter" class="current">
                     <h1 class="withborder">Siste tweets</h1>
                     <div id="loadingfortwitterfeed">
-                    <img class="spin" src="stylesheets/common/images/loader.png" /></div>
+                        <img class="spin" src="stylesheets/common/images/loader.png" /></div>
                     <ul id="tweets2">
                     </ul>
                 </div>
@@ -158,7 +168,7 @@
                 src="javascripts/index/event.js">
                 </script>
             <div data-role="header" data-theme="b">
-             
+                
                 <h3>EVENT</h3>
             </div>
             
@@ -204,7 +214,7 @@
             </div>
             
             <div data-role="content">
-         
+                
                 <div id="loadingmsg2"><img class="spin" src="stylesheets/common/images/loader.png" /></div>
                 
                 <div id="programlist">
@@ -446,7 +456,7 @@
                             <label for="endTime2">Datetime</label>
                             <input type="text" name="endTime2" id="endTime2" class="mobiscroll" placeholder="Slutt: dd/mm/yyyy-hh:mm"/>
                         </div>
-                                       
+                        
                         <div class="ui-hide-label" id="privacy2">
                             
                         </div>
@@ -710,7 +720,7 @@
                 src="javascripts/admin/add-child-manually.js">
                 </script>
             <div data-role="header" data-theme="b" data-position="fixed">
-               <a href="#fadderchildren-pagen"  data-role="button" class="ui-btn-left">Tilbake</a>
+                <a href="#fadderchildren-pagen"  data-role="button" class="ui-btn-left">Tilbake</a>
                 <h3>LEGG TIL BARN</h3>
             </div>
             
