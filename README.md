@@ -13,10 +13,8 @@
 - Do it
 
 ### Add tokens
-Do this:
->     some
->     code
->     here
+- Download from this gist [Application.js](https://gist.github.com/2644924)
+- Add file Application.js  -> www/javascripts/commin/Application.js    
 
 ### Run the project!
 - Run the project either on the simulator or an iPhone or iPad!
