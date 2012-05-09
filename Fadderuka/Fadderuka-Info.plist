@@ -12,11 +12,12 @@
 	<string>normal.png</string>
 	<key>CFBundleIconFiles</key>
 	<array>
-		<string>normal.png</string>
-		<string>retina.png</string>
+		<string>icon.png</string>
+		<string>icon2x.png</string>
 		<string>icon-72.png</string>
 		<string>Default@2x.png</string>
 		<string>Default.png</string>
+		<string>icon@2x.png</string>
 	</array>
 	<key>CFBundleIcons</key>
 	<dict>
