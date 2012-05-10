@@ -14,9 +14,9 @@
         rel="stylesheet" type="text/css" />
         
         <script type="text/javascript" charset="utf-8">
-            $(document).bind("mobileinit", function() {
-                             $.mobile.touchOverflowEnabled = true;
-                             });
+          $(document).bind("mobileinit", function() {
+                            $.mobile.touchOverflowEnabled = true;
+                });
         </script>   
         
         <!--external-->
@@ -35,12 +35,13 @@
         <script type="text/javascript" charset="utf-8"
             src="javascripts/external/jquery/jquery.mobile.scrollview.js">
             </script>
+
         <!-- /Scrollview -->
         
     
-        <!-- cordova 1.6.1-->
+        <!-- cordova 1.7.0-->
         <script type="text/javascript" charset="utf-8"
-            src="javascripts/external/cordova-1.6.1.js">
+            src="javascripts/external/cordova-1.7.0.js">
             </script>
         <!-- child browser -->
         <script type="text/javascript"charset="utf-8"
@@ -62,9 +63,8 @@
         
         <!--common-->
         <script type="text/javascript" charset="utf-8"
-            src="javascripts/common/application.js">
+            src="javascripts/common/Application.js">
             </script>
-        
         
         <script type="text/javascript" charset="utf-8"
             src="javascripts/common/dialog.js">
@@ -72,8 +72,8 @@
        
         <script type="text/javascript" charset="utf-8"
             src="javascripts/RestHandler.js">
-            </script>
-    
+        </script>
+     
     </head>
     <body>
         
@@ -86,10 +86,11 @@
         
         <div data-role="page" data-theme="c" id="dashboard-page" class="scrollview">
             <link rel="stylesheet" href="stylesheets/index.css"/>
-            <script type="text/javascript" charset="utf-8"
+            
+             <script type="text/javascript" charset="utf-8"
                 src="javascripts/index/index.js">
                 </script>
-            <script type="text/javascript" charset="utf-8"
+         <script type="text/javascript" charset="utf-8"
                 src="javascripts/index/login.js">
                 </script>
             <div  data-role="header" data-position="fixed" data-theme="b">

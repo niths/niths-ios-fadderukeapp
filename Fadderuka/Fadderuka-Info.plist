@@ -8,16 +8,35 @@
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
-	<key>CFBundleIconFile</key>
-	<string>normal.png</string>
 	<key>CFBundleIconFiles</key>
 	<array>
-		<string>icon.png</string>
-		<string>icon2x.png</string>
-		<string>icon-72.png</string>
-		<string>Default@2x.png</string>
 		<string>Default.png</string>
+		<string>Default@2x.png</string>
 		<string>icon@2x.png</string>
+		<string>icon.png</string>
+		<string>Default-Portrait~ipad.png</string>
+		<string>Default-Portrait@2x~ipad.png</string>
+		<string>Default-Landscape~ipad.png</string>
+		<string>Default-Landscape@2x~ipad.png</string>
+		<string>icon-72.png</string>
+		<string>icon144.png</string>
+		<string>Default-Portrait~ipad.png</string>
+		<string>icon-144.png</string>
+		<string>Default-Portrait~ipad.png</string>
+		<string>Default-Portrait~ipad.png</string>
+		<string>Default-Portrait~ipad.png</string>
+		<string>Default-Portrait@2x~ipad.png</string>
+		<string>Default-Portrait@2x~ipad.png</string>
+		<string>Default-Portrait~ipad.png</string>
+		<string>Default-Portrait~ipad.png</string>
+		<string>Default-Portrait@2x~ipad.png</string>
+		<string>icon-144.png</string>
+		<string>Default-Portrait~ipad.png</string>
+		<string>Default-Portrait@2x~ipad.png</string>
+		<string>Default-Portrait@2x~ipad.png</string>
+		<string>Default-Portrait~ipad.png</string>
+		<string>Default-Portrait@2x~ipad.png</string>
+		<string>Default-Portrait~ipad.png</string>
 	</array>
 	<key>CFBundleIcons</key>
 	<dict>
@@ -25,12 +44,36 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>normal.png</string>
-				<string>retina.png</string>
-				<string>icon-72.png</string>
-				<string>Default@2x.png</string>
 				<string>Default.png</string>
+				<string>Default@2x.png</string>
+				<string>icon@2x.png</string>
+				<string>icon.png</string>
+				<string>Default-Portrait~ipad.png</string>
+				<string>Default-Portrait@2x~ipad.png</string>
+				<string>Default-Landscape~ipad.png</string>
+				<string>Default-Landscape@2x~ipad.png</string>
+				<string>icon-72.png</string>
+				<string>icon144.png</string>
+				<string>Default-Portrait~ipad.png</string>
+				<string>icon-144.png</string>
+				<string>Default-Portrait~ipad.png</string>
+				<string>Default-Portrait~ipad.png</string>
+				<string>Default-Portrait~ipad.png</string>
+				<string>Default-Portrait@2x~ipad.png</string>
+				<string>Default-Portrait@2x~ipad.png</string>
+				<string>Default-Portrait~ipad.png</string>
+				<string>Default-Portrait~ipad.png</string>
+				<string>Default-Portrait@2x~ipad.png</string>
+				<string>icon-144.png</string>
+				<string>Default-Portrait~ipad.png</string>
+				<string>Default-Portrait@2x~ipad.png</string>
+				<string>Default-Portrait@2x~ipad.png</string>
+				<string>Default-Portrait~ipad.png</string>
+				<string>Default-Portrait@2x~ipad.png</string>
+				<string>Default-Portrait~ipad.png</string>
 			</array>
+			<key>UIPrerenderedIcon</key>
+			<true/>
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
@@ -48,6 +91,8 @@
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UIPrerenderedIcon</key>
 	<true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>

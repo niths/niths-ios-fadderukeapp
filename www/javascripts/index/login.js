@@ -1,13 +1,6 @@
-$("#dashboard-page").live('pageshow', function() {
-   if(sessionToken == ""){
-      $("#loginbtn .ui-btn-text").text("Logg inn");
-      $('#adminsectionbtn').css('display', 'none');
-    }else{
-      $("#loginbtn .ui-btn-text").text("Logg ut");
-    }
-});
 
-$(document).ready(function() {
+$('#dashboard-page').bind('pageinit', function() {
+                          console.log('pageInit');
   var restClient       = new RestHandler();
   var callbackURL      = 'http://niths.no/callback';
   var stateURLFragment = 'state=/profile';
@@ -149,3 +142,16 @@ $(document).ready(function() {
       $('#adminsectionbtn').css('display', 'none');
   }
 });
+
+$('#dashboard-page').live('pageshow', function() {
+                          
+                console.log(sessionToken); 
+ if(sessionToken == ''){
+ $('#loginbtn .ui-btn-text').text('Logg inn');
+ $('#adminsectionbtn').css('display', 'none');
+ }else{
+ $("#loginbtn .ui-btn-text").text('Logg ut');
+ }
+                          
+ });
+ 
