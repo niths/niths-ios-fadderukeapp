@@ -89,7 +89,7 @@ $("#dashboard-page").live('pageinit', function() {
  */
                           function loadEvents(){
                           
-                          restClient.find('events/tags-and-dates' + getDatesBetweenUrlParam(),  function(data) {  
+                          restClient.findRestricted('events/tags-and-dates' + getDatesBetweenUrlParam(),  function(data) {  
                                           var theHTML = '';
                                           var num = 0;
                                           
