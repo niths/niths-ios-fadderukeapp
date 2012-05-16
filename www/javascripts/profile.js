@@ -17,7 +17,7 @@ $("#profile-page").live('pageinit', function() {
 	            }
 	        } else {
 	        	if(this.value != ''){
-	                o[this.name] = htmlEncode(this.value) || '';
+	                o[this.name] = $.trim(htmlEncode(this.value)) || '';
 	            }
 	        }
 	    });

@@ -125,8 +125,8 @@ function showData(event){
 function getDataFromForm(){
 	var json = '{'+
     '"id":'+ $('#idE').val() +','
-    +'"name": "'+htmlEncode($('#name').val())+'",'+
-    '"description": "'+ htmlEncode($('#description').val())+ '",'+
+    +'"name": "'+$.trim(htmlEncode($('#name').val()))+'",'+
+    '"description": "'+ $.trim(htmlEncode($('#description').val()))+ '",'+
     '"startTime": "'+$('#startTime').val().replace(' ', '-')+'",'+
     '"endTime": "'+$('#endTime').val().replace(' ', '-')+'",'+
     '"tags": "fadderuka12';
@@ -139,9 +139,9 @@ function getDataFromForm(){
 	if($('#place').val() != ''){
 		json += 
         ', "location": {'+
-        '"place": "' + htmlEncode($('#place').val()) + '",'+
-        '"latitude": '+htmlEncode($('#latitude').val())+','+
-        '"longitude": ' + htmlEncode($('#longitude').val()) +
+        '"place": "' + $.trim(htmlEncode($('#place').val())) + '",'+
+        '"latitude": '+$.trim(htmlEncode($('#latitude').val()))+','+
+        '"longitude": ' + $.trim(htmlEncode($('#longitude').val())) +
         '}';
 	}
 	return json + '}';

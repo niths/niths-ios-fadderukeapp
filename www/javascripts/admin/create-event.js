@@ -110,9 +110,9 @@ $("#admin-create-event-page").live('pageinit', function() {
 
 function getDataFromCreateForm() {
     var json = '{' +
-    '"name": "'+htmlEncode($('#name2').val()) + '"';
+    '"name": "'+$.trim(htmlEncode($('#name2').val())) + '"';
     if ($('#description2').val() != '') {
-        json += ', "description": "'+ htmlEncode($('#description2').val())+ '"';
+        json += ', "description": "'+ $.trim(htmlEncode($('#description2').val()))+ '"';
     }
     if($('#startTime2').val() != ''){
         json += ', "startTime": "'+$('#startTime2').val().replace(' ', '-')+'"';
@@ -130,7 +130,7 @@ function getDataFromCreateForm() {
     
     var currentLocation = locations[currentLocationIndex];
     json += ', "location": {'+
-    '"place": "'    + currentLocation.formatted_address + '",' +
+    '"place": "'    + $.trim(currentLocation.formatted_address) + '",' +
     '"latitude": '  + currentLocation.geometry.location.lat + ',' +
     '"longitude": ' + currentLocation.geometry.location.lng +
     '}';
