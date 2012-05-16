@@ -78,7 +78,7 @@ $('#leadergrouplist li').live('click', function(event) {
 
 
 function loadEvents(){
-	restClient.find('events/tags-and-dates' + getDatesBetweenUrlParam(false),  function(data, status, e) {  
+	restClient.findRestricted('events/tags-and-dates' + getDatesBetweenUrlParam(false),  function(data, status, e) {  
 		var theHTML = '';
 		if(status == 'success') {
 			if(data.length > 0){
@@ -103,7 +103,7 @@ function loadEvents(){
 	}); 
 }
 function loadLeaderGroupEvents(){
-	restClient.find('events/tags-and-dates' + getDatesBetweenUrlParam(true),  function(data, status, e) {  
+	restClient.findRestricted('events/tags-and-dates' + getDatesBetweenUrlParam(true),  function(data, status, e) {  
 		var theHTML = '';
 		if(status == 'success') {
 			if(data.length > 0){

@@ -17,6 +17,7 @@
 function RestHandler(){
     // change to https
     this.baseUrl2 = 'http://ec2-46-137-46-84.eu-west-1.compute.amazonaws.com:8080/niths/';
+
     // temp url for filuploader since it needs verifide ssl certificatet.
     this.baseUrl = 'http://ec2-46-137-46-84.eu-west-1.compute.amazonaws.com:8080/niths/';
     this.find = function(modelUrl, callbackSuccess, callbackError) {
@@ -27,7 +28,7 @@ function RestHandler(){
                cache: false,
                success: callbackSuccess,
                error: callbackError,
-               timeout:10000
+               timeout:5000
                });
     }; //End find
     
@@ -47,7 +48,7 @@ function RestHandler(){
                },
                success: callbackSuccess,
                error: callbackError,
-               timeout:10000
+               timeout:5000
                });
     }; //End find
     
@@ -155,7 +156,7 @@ function RestHandler(){
         $.mobile.hidePageLoadingMsg();
         if (errorThrown == 'Unauthorized') {
             showErr(
-                    'Beklager, du har v√¶rt inaktiv for lenge, logg inn igjen',
+                    'Beklager, du har vært inaktiv for lenge, logg inn igjen',
                     function() {
                     sessionToken = '';
                     $.mobile.changePage('#dashboard-page');
@@ -169,3 +170,5 @@ function RestHandler(){
         }
     }
 } //End class
+
+

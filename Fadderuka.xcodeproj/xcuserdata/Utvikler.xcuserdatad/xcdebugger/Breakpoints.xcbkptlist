@@ -79,11 +79,23 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "www/javascripts/index/index.js"
-         timestampString = "357145873.559179"
+         timestampString = "358878697.601224"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "144"
-         endingLineNumber = "144">
+         startingLineNumber = "145"
+         endingLineNumber = "145">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "www/javascripts/fb.js"
+         timestampString = "358877384.554207"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "9"
+         endingLineNumber = "9">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

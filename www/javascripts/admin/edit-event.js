@@ -77,7 +77,7 @@ $("#admin-edit-event-page").live('pageinit', function() {
 
 function loadEventToEdit(id){
 	var restClient = new RestHandler(); //REST CLIENT
-	restClient.find('events/'+ id,  function(data) {  
+	restClient.findRestricted('events/'+ id,  function(data) {  
 		showData(data);
 		showTheEvent2();		
 	}, function(req, status, ex) {

@@ -1,35 +1,63 @@
+
+
+var defaultTwitterTag = 'http://search.twitter.com/search.json?q=%23nith&rpp=5';
+var twitterURLJSON= '';
+var restClient = new RestHandler(); //REST CLIENT
+
+
 $("#dashboard-page").live('pageinit', function() {
-                          //TODO: REMOVE ON iOS AND WP7 --> Android doesnt handle transitions well
-                          $.mobile.defaultPageTransition = 'none';
-                          $.mobile.defaultDialogTransition = 'none';
-                          $.support.cors = true;
-                          /////////////////////////////////
-                          
-                        
-                          
-                          //url : 'http://search.twitter.com/search.json?q=from%3Anithutdanning&rpp=5',
-                          //url : 'http://search.twitter.com/search.json?q=to%3Anithutdanning&rpp=5',
-                          var twitterTag = 'nith';
-                          var twitterURLJSON= 'http://search.twitter.com/search.json?q=%23'+twitterTag+'&rpp=5'
-                          var twitterURL = 'http://search.twitter.com/search?q=%23'+twitterTag;
-                          var restClient = new RestHandler(); //REST CLIENT
-                          init();
-                          
-                          function init(){
-                          showTweetLoading();
-                          loadTweets(); 
-                          loadEvents();
-                          }
-                          
-                          $('#resfresheventsbtn').click(function() {
+   //TODO: REMOVE ON iOS AND WP7 --> Android doesnt handle transitions well
+   $.mobile.defaultPageTransition = 'none';
+   $.mobile.defaultDialogTransition = 'none';
+   $.support.cors = true;
+
+    getTweets();
+    loadEvents();
+                 
+                         
+                                        $('#resfresheventsbtn').click(function() {
                                                         showEventsLoading();
                                                         loadEvents();
                                                         });
                           
-                          $('#refreshtweetbtn').click(function(data) {
-                                                      showTweetLoading();
-                                                      loadTweets();
-                                                      });
+ $('#refreshtweetbtn').click(function(data) {
+    getTweets()
+
+  });    
+      
+ });
+   
+                          
+function getTweets(){
+    if(twitterURLJSON == ''){
+        restClient.findRestricted('sociallinks?socialCommunity=twitter&category=fadderuka',  function(data) { 
+
+            if(data.length >= 1){
+                twitterURLJSON = data[0].address;
+            }else {
+                console.log('using standard');
+                twitterURLJSON = standardURL;
+            }
+            console.log(twitterURLJSON);
+            showTweetLoading();
+            loadTweets(); 
+    
+        }, function(req, status, ex) {
+            console.log(status + ' ' + ex + ' using standar url');
+            showTweetLoading();
+            loadTweets(); 
+        });
+    
+    }else {
+        showTweetLoading();
+        loadTweets(); 
+    }
+} // end get tweet
+   
+                          
+                                                 
+                          
+                   
                           
                           
                           function showEventsLoading(){
@@ -153,4 +181,3 @@ $("#dashboard-page").live('pageinit', function() {
                           $('#loadingfortwitterfeed').css('display', 'none');
                           $('#tweets2').css('display', 'block');
                           }
-                          });
