@@ -1,6 +1,6 @@
-$('#Gallery1').live('pageinit', function() {
-	getLatestImages();
-
+$('#Gallery1').live('pageshow', function() {
+	refresh();
+    
 
 function showImgs(){
 	$('#galleryloader').css('display', 'none');

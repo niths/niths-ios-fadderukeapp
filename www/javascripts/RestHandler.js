@@ -15,12 +15,14 @@
  * });
  */
 function RestHandler(){
+    // change to https
+    this.baseUrl2 = 'http://ec2-46-137-46-84.eu-west-1.compute.amazonaws.com:8080/niths/';
+    // temp url for filuploader since it needs verifide ssl certificatet.
     this.baseUrl = 'http://ec2-46-137-46-84.eu-west-1.compute.amazonaws.com:8080/niths/';
-    
     this.find = function(modelUrl, callbackSuccess, callbackError) {
         $.ajax({
                type: 'GET',
-               url: this.baseUrl + modelUrl,
+               url: this.baseUrl2 + modelUrl,
                contentType: 'application/json',
                cache: false,
                success: callbackSuccess,
@@ -32,13 +34,13 @@ function RestHandler(){
     this.findRestricted = function(modelUrl, callbackSuccess, callbackError) {
         $.ajax({
                type: 'GET',
-               url: this.baseUrl + modelUrl,
+               url: this.baseUrl2 + modelUrl,
                contentType: 'application/json',
                cache: false,
                beforeSend: function(xhr) {
-               xhr.setRequestHeader("Application-key", applicationKey);
+               
                xhr.setRequestHeader("Application-token", applicationToken);
-               xhr.setRequestHeader("Developer-key", developerKey);
+              
                xhr.setRequestHeader("Developer-token", developerToken);
                xhr.setRequestHeader("Session-token", sessionToken);
                
@@ -53,12 +55,10 @@ function RestHandler(){
         $.mobile.showPageLoadingMsg();
         $.ajax({
                type: 'DELETE',
-               url: this.baseUrl + modelUrl,
+               url: this.baseUrl2 + modelUrl,
                cache: false,
                beforeSend: function(xhr) {
-               xhr.setRequestHeader("Application-key", applicationKey);
                xhr.setRequestHeader("Application-token", applicationToken);
-               xhr.setRequestHeader("Developer-key", developerKey);
                xhr.setRequestHeader("Developer-token", developerToken);
                xhr.setRequestHeader("Session-token", sessionToken);
                },
@@ -74,14 +74,12 @@ function RestHandler(){
         $.mobile.showPageLoadingMsg();
         $.ajax({
                type: 'PUT',
-               url: this.baseUrl + modelUrl,
+               url: this.baseUrl2 + modelUrl,
                cache: false,
                contentType: 'application/json',
                data: dataJ,
                beforeSend: function(xhr) {
-               xhr.setRequestHeader("Application-key", applicationKey);
                xhr.setRequestHeader("Application-token", applicationToken);
-               xhr.setRequestHeader("Developer-key", developerKey);
                xhr.setRequestHeader("Developer-token", developerToken);
                xhr.setRequestHeader("Session-token", sessionToken);
                },
@@ -96,13 +94,11 @@ function RestHandler(){
         $.mobile.showPageLoadingMsg();
         $.ajax({
                type: 'POST',
-               url: this.baseUrl + modelUrl,
+               url: this.baseUrl2 + modelUrl,
                cache: false,
                contentType: 'application/json',
-               beforeSend: function(xhr) {
-               xhr.setRequestHeader("Application-key", applicationKey);
+               beforeSend: function(xhr) {    
                xhr.setRequestHeader("Application-token", applicationToken);
-               xhr.setRequestHeader("Developer-key", developerKey);
                xhr.setRequestHeader("Developer-token", developerToken);
                xhr.setRequestHeader("Session-token", sessionToken);
                },
@@ -117,14 +113,12 @@ function RestHandler(){
         $.mobile.showPageLoadingMsg();
         $.ajax({
                type: 'POST',
-               url: this.baseUrl + modelUrl,
+               url: this.baseUrl2 + modelUrl,
                cache: false,
                data: json,
                contentType: 'application/json',
                beforeSend: function(xhr) {
-               xhr.setRequestHeader("Application-key", applicationKey);
                xhr.setRequestHeader("Application-token", applicationToken);
-               xhr.setRequestHeader("Developer-key", developerKey);
                xhr.setRequestHeader("Developer-token", developerToken);
                xhr.setRequestHeader("Session-token", sessionToken);
                },
@@ -138,14 +132,12 @@ function RestHandler(){
         $.mobile.showPageLoadingMsg();
         $.ajax({
                type: 'POST',
-               url: this.baseUrl + modelUrl,
+               url: this.baseUrl2 + modelUrl,
                cache: false,
                contentType: 'application/json',
                data: dataJ,
                beforeSend: function(xhr) {
-               xhr.setRequestHeader("Application-key", applicationKey);
-               xhr.setRequestHeader("Application-token", applicationToken);
-               xhr.setRequestHeader("Developer-key", developerKey);
+               xhr.setRequestHeader("Application-token", applicationToken);              
                xhr.setRequestHeader("Developer-token", developerToken);
                xhr.setRequestHeader("Session-token", sessionToken);
                },
