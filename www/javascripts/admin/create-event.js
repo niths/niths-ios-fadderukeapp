@@ -1,5 +1,5 @@
 var locations = '';
-var currentLocationIndex = '';
+var currentLocationIndex = 0;
 
 $("#admin-create-event-page").live('pageshow', function() {
                                    $('#name2').val('');
@@ -9,6 +9,7 @@ $("#admin-create-event-page").live('pageshow', function() {
                                    $('#endTime2').val(dateToday);
                                    $('#place2').val('Schweigaards gate 14');
                                    searchOnLocation();
+                                   currentLocationIndex = 0;
                                    });
 
 function getDateTodayAsString(){
@@ -84,6 +85,7 @@ $("#admin-create-event-page").live('pageinit', function() {
                                                                                 // Extract the current index of the location
                                                                                 currentLocationIndex = /location-(\d+)/.exec(
                                                                                                                              $('#create-event-location-selection option:selected').attr('id'))[1];
+                                                                                console.log(currentLocationIndex);
                                                                                 });
                                    
                                    $('#createeventsubmit').click(function() {

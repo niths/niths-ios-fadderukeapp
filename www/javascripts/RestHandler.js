@@ -154,6 +154,7 @@ function RestHandler(){
     
     function handleError(errorThrown, jqXHR){
         $.mobile.hidePageLoadingMsg();
+        console.log(errorThrown + ' ' +jqXHR);
         if (errorThrown == 'Unauthorized') {
             showErr(
                     'Beklager, du har v¾rt inaktiv for lenge, logg inn igjen',

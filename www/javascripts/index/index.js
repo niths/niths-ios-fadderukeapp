@@ -58,6 +58,7 @@ function getTweets(){
     
         }, function(req, status, ex) {
             console.log(status + ' ' + ex + ' using standar url');
+                                  twitterURLJSON = defaultTwitterTag;
             showTweetLoading();
             loadTweets(); 
         });

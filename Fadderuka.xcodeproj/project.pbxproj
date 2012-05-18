@@ -43,12 +43,8 @@
 		198E7CA515456A9600A7DE6D /* www in Resources */ = {isa = PBXBuildFile; fileRef = 198E7CA415456A9600A7DE6D /* www */; };
 		19A6601A154957E300504A6B /* ChildBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 19A66019154957E300504A6B /* ChildBrowser.bundle */; };
 		C98C17EE155C37B3008A9D33 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C98C17ED155C37B3008A9D33 /* Default-Landscape@2x~ipad.png */; };
-		C98C19B8155C536F008A9D33 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C98C19B7155C536F008A9D33 /* Default-Landscape~ipad.png */; };
-		C98C19BA155C5378008A9D33 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C98C19B9155C5378008A9D33 /* Default-Landscape@2x~ipad.png */; };
 		C98C19BC155C557C008A9D33 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C98C19BB155C557C008A9D33 /* Default.png */; };
 		C98C19BE155C558A008A9D33 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C98C19BD155C558A008A9D33 /* Default@2x.png */; };
-		C98C19C8155C55FC008A9D33 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C98C19C7155C55FC008A9D33 /* Default-Landscape~ipad.png */; };
-		C98C19CA155C5618008A9D33 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C98C19C9155C5618008A9D33 /* Default-Landscape@2x~ipad.png */; };
 		C98C19D8155C5E39008A9D33 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C98C19D7155C5E39008A9D33 /* Default-Portrait~ipad.png */; };
 		C98C19DA155C5E4A008A9D33 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C98C19D9155C5E4A008A9D33 /* Default-Portrait@2x~ipad.png */; };
 		C98C19DC155C5F59008A9D33 /* icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = C98C19DB155C5F59008A9D33 /* icon-144.png */; };
@@ -105,8 +101,6 @@
 		C98C19B9155C5378008A9D33 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape@2x~ipad.png"; path = "../Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
 		C98C19BB155C557C008A9D33 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		C98C19BD155C558A008A9D33 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
-		C98C19C7155C55FC008A9D33 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
-		C98C19C9155C5618008A9D33 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
 		C98C19D7155C5E39008A9D33 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		C98C19D9155C5E4A008A9D33 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
 		C98C19DB155C5F59008A9D33 /* icon-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-144.png"; sourceTree = "<group>"; };
@@ -381,12 +375,8 @@
 				19A6601A154957E300504A6B /* ChildBrowser.bundle in Resources */,
 				198CB322155A5DDA00D9BC46 /* Default-Landscape~ipad.png in Resources */,
 				C98C17EE155C37B3008A9D33 /* Default-Landscape@2x~ipad.png in Resources */,
-				C98C19B8155C536F008A9D33 /* Default-Landscape~ipad.png in Resources */,
-				C98C19BA155C5378008A9D33 /* Default-Landscape@2x~ipad.png in Resources */,
 				C98C19BC155C557C008A9D33 /* Default.png in Resources */,
 				C98C19BE155C558A008A9D33 /* Default@2x.png in Resources */,
-				C98C19C8155C55FC008A9D33 /* Default-Landscape~ipad.png in Resources */,
-				C98C19CA155C5618008A9D33 /* Default-Landscape@2x~ipad.png in Resources */,
 				C98C19D8155C5E39008A9D33 /* Default-Portrait~ipad.png in Resources */,
 				C98C19DA155C5E4A008A9D33 /* Default-Portrait@2x~ipad.png in Resources */,
 				C98C19DC155C5F59008A9D33 /* icon-144.png in Resources */,
