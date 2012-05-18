@@ -79,11 +79,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "www/javascripts/index/index.js"
-         timestampString = "358878697.601224"
+         timestampString = "359020914.990158"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "145"
-         endingLineNumber = "145">
+         startingLineNumber = "147"
+         endingLineNumber = "147">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"

@@ -46,10 +46,11 @@ function getTweets(){
         restClient.findRestricted('sociallinks?socialCommunity=twitter&category=fadderuka',  function(data) { 
 
             if(data.length >= 1){
+                console.log('found url');
                 twitterURLJSON = data[0].address;
             }else {
                 console.log('using standard');
-                twitterURLJSON = standardURL;
+                twitterURLJSON = defaultTwitterTag;
             }
             console.log(twitterURLJSON);
             showTweetLoading();
@@ -62,6 +63,7 @@ function getTweets(){
         });
     
     }else {
+        console.log('got twitter url');
         showTweetLoading();
         loadTweets(); 
     }
