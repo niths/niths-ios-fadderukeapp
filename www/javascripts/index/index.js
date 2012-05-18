@@ -6,7 +6,6 @@ var restClient = new RestHandler(); //REST CLIENT
 
 
 $("#dashboard-page").live('pageinit', function() {
-   //TODO: REMOVE ON iOS AND WP7 --> Android doesnt handle transitions well
    $.mobile.defaultPageTransition = 'none';
    $.mobile.defaultDialogTransition = 'none';
    $.support.cors = true;
@@ -15,17 +14,31 @@ $("#dashboard-page").live('pageinit', function() {
     loadEvents();
                  
                          
-                                        $('#resfresheventsbtn').click(function() {
-                                                        showEventsLoading();
-                                                        loadEvents();
-                                                        });
+   $('#resfresheventsbtn').click(function() {
+              showEventsLoading();
+                      loadEvents();
+    });
                           
  $('#refreshtweetbtn').click(function(data) {
     getTweets()
 
-  });    
+  });   
+  
+    $('#tweets2').click(function() {  
+         var twitterURL = twitterURLJSON.replace('.json','');  ;
+                           
+        if(window.plugins.childBrowser != null){
+          window.plugins.childBrowser.showWebPage(twitterURL);
+        }else{
+         ChildBrowser.install()	
+         window.plugins.childBrowser.showWebPage(twitterURL);
+        }                                              
+    });   
       
  });
+   
+ 	
+   
    
                           
 function getTweets(){
